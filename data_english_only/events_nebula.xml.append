@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FTL>
+<findName name="NEBULA_ROCK_RACIST" type="event">
+	<choice hidden="true" req="orchid">
+		<text>(Orchid) Bring the crewmember to the comm.</text>
+		<event>
+			<text>"Flowers? For me? I apologize for offending you earlier." The Rocks allow you to steer them to a thinner part of the nebula. They're amazed by your generosity, and transfer over some supplies.</text>
+			<autoReward level="HIGH">standard</autoReward>
+		</event>
+	</choice>
+</findName>
+</FTL>

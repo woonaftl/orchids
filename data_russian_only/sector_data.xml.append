@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FTL>
+<findName name="CIVILIAN" type="sectorType">
+	<sector>ORCHID_SECTOR</sector>
+</findName>
+<sectorDescription minSector="0" name="ORCHID_SECTOR" unique="false">
+	<nameList>
+		<name short="sectorname_ORCHID_SECTOR">Родной мир орхидов</name>
+	</nameList>
+	<trackList>
+		<track>milkyway</track>
+		<track>cosmos</track>
+		<track>lostship</track>
+	</trackList>
+	<rarityList>
+		<blueprint name="orchid" rarity="1"/>
+		<blueprint name="human" rarity="3"/>
+		<blueprint name="rock" rarity="3"/>
+		<blueprint name="mantis" rarity="4"/>
+		<blueprint name="engi" rarity="5"/>
+		<blueprint name="energy" rarity="5"/>
+		<blueprint name="slug" rarity="0"/>
+		<blueprint name="crystal" rarity="0"/>
+		<blueprint name="anaerobic" rarity="0"/>
+		<blueprint name="KERNEL_1" rarity="1"/>
+		<blueprint name="KERNEL_2" rarity="1"/>
+		<blueprint name="KERNEL_CHAIN" rarity="4"/>
+		<blueprint name="MISSILES_1" rarity="0"/>
+		<blueprint name="MISSILES_2" rarity="0"/>
+		<blueprint name="MISSILES_2_PLAYER" rarity="0"/>
+		<blueprint name="MISSILES_3" rarity="0"/>
+		<blueprint name="MISSILES_BURST" rarity="0"/>
+		<blueprint name="MISSILES_BREACH" rarity="0"/>
+		<blueprint name="MISSILES_HULL" rarity="0"/>
+		<blueprint name="MISSILE_CHARGEGUN" rarity="0"/>
+		<blueprint name="BEAM_FIRE" rarity="0"/>
+		<blueprint name="BOMB_FIRE" rarity="0"/>
+	</rarityList>
+	<startEvent>START_BEACON_ORCHID</startEvent>
+	<event max="2" min="2" name="STORE_ORCHID"/>
+	<event max="4" min="2" name="NOTHING_ORCHID"/>
+	<event max="3" min="2" name="ITEMS_ORCHID"/>
+	<event max="3" min="2" name="DISTRESS_BEACON_ORCHID"/>
+	<event max="2" min="1" name="QUESTS_ORCHID"/>
+	<event max="8" min="5" name="NEUTRAL_ORCHID"/>
+	<event max="8" min="5" name="HOSTILE_ORCHID"/>
+</sectorDescription>
+</FTL>

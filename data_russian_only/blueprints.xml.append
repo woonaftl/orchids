@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FTL>
+<findName name="oxygen" type="systemBlueprint">
+	<findLike type="cost">
+		<setValue>60</setValue>
+	</findLike>
+</findName>
+<crewBlueprint name="orchid">
+	<title>Орхид</title>
+	<short>Орхид</short>
+	<desc>Эти растительные формы жизни имеют мало общего с земными, но насыщают воздух кислородом столь же хорошо.</desc>
+	<cost>50</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Наполняет отсеки кислородом</power>
+		<power>Получает в 4 раза больше урона от пожаров</power>
+		<power>Тушит пожары в 2 раза медленнее</power>
+	</powerList>
+	<colorList>
+		<layer>
+			<!-- Layer 1 - Leaves -->
+			<color a="0.7" b="0" g="180" r="100"/>
+			<color a="0.7" b="100" g="180" r="0"/>
+			<color a="0.7" b="80" g="150" r="80"/>
+		</layer>
+		<layer>
+			<!-- Layer 2 - Flower -->
+			<color a="0.7" b="240" g="130" r="255"/>
+			<color a="0.7" b="50" g="65" r="255"/>
+			<color a="0.7" b="130" g="150" r="255"/>
+			<color a="0.7" b="50" g="200" r="255"/>
+			<color a="0.7" b="140" g="240" r="255"/>
+			<color a="0.7" b="230" g="255" r="50"/>
+			<color a="0.7" b="240" g="255" r="150"/>
+			<color a="0.7" b="255" g="50" r="120"/>
+			<color a="0.7" b="255" g="100" r="180"/>
+		</layer>
+		<layer>
+			<!-- Layer 3 - That part -->
+			<color a="0" b="93" g="222" r="252"/>
+		</layer>
+	</colorList>
+</crewBlueprint>
+<augBlueprint name="ORCHID_RECYCLER">
+	<title>Орхидский переработчик</title>
+	<desc>Ракетное вооружение может с вероятностью 75% не потратить боеголовку при выстреле.</desc>
+	<cost>80</cost>
+	<bp>8</bp>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+<weaponBlueprint name="KERNEL_1">
+	<type>MISSILES</type>
+	<tip>tip_missiles</tip>
+	<title>Зерномет мод. I</title>
+	<short>Зерн. I</short>
+	<desc>Это орудие стреляет зернами огромных растений с родной планеты орхидов. Зерна наносят 1 ед. урона, оставляют пробой в корпусе и оглушают экипаж.</desc>
+	<tooltip>Выпускает 1 зерно на 1 ед. урона; пробивает любые щиты; пробой.</tooltip>
+	<damage>1</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<stun>5</stun>
+	<fireChance>0</fireChance>
+	<breachChance>10</breachChance>
+	<stunChance>0</stunChance>
+	<cooldown>10</cooldown>
+	<power>1</power>
+	<cost>40</cost>
+	<bp>6</bp>
+	<rarity>0</rarity>
+	<image>kernel_projectile</image>
+	<launchSounds>
+		<sound>kernel_launch1</sound>
+		<sound>kernel_launch2</sound>
+		<sound>kernel_launch3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>kernel_1</weaponArt>
+	<iconImage>missile</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="KERNEL_1_ENEMY">
+	<type>MISSILES</type>
+	<tip>tip_missiles</tip>
+	<title>Зерномет мод. I</title>
+	<short>Зерн. I</short>
+	<desc>Это орудие стреляет зернами огромных растений с родной планеты орхидов. Зерна наносят 1 ед. урона, оставляют пробой в корпусе и оглушают экипаж.</desc>
+	<tooltip>Выпускает 1 зерно на 1 ед. урона; пробивает любые щиты; пробой.</tooltip>
+	<damage>1</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<stun>5</stun>
+	<fireChance>0</fireChance>
+	<breachChance>10</breachChance>
+	<stunChance>0</stunChance>
+	<cooldown>12</cooldown>
+	<power>2</power>
+	<cost>40</cost>
+	<bp>6</bp>
+	<rarity>0</rarity>
+	<image>kernel_projectile</image>
+	<launchSounds>
+		<sound>kernel_launch1</sound>
+		<sound>kernel_launch2</sound>
+		<sound>kernel_launch3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>kernel_1</weaponArt>
+	<iconImage>missile</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="KERNEL_2">
+	<type>MISSILES</type>
+	<tip>tip_missiles</tip>
+	<title>Зерномет мод. II</title>
+	<short>Зерн. II</short>
+	<desc>Эта модель зерномета выпускает 2 снаряда за один залп.</desc>
+	<tooltip>Выпускает 2 зерна на 1 ед. урона; пробивает любые щиты; пробой.</tooltip>
+	<damage>1</damage>
+	<missiles>1</missiles>
+	<shots>2</shots>
+	<sp>5</sp>
+	<stun>5</stun>
+	<fireChance>0</fireChance>
+	<breachChance>10</breachChance>
+	<stunChance>0</stunChance>
+	<cooldown>15</cooldown>
+	<power>2</power>
+	<cost>50</cost>
+	<bp>6</bp>
+	<rarity>0</rarity>
+	<image>kernel_projectile</image>
+	<launchSounds>
+		<sound>kernel_launch1</sound>
+		<sound>kernel_launch2</sound>
+		<sound>kernel_launch3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>kernel_2</weaponArt>
+	<iconImage>missile</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="KERNEL_2_ENEMY">
+	<type>MISSILES</type>
+	<tip>tip_missiles</tip>
+	<title>Зерномет мод. II</title>
+	<short>Зерн. II</short>
+	<desc>Эта модель зерномета выпускает 2 снаряда за один залп.</desc>
+	<tooltip>Выпускает 2 зерна на 1 ед. урона; пробивает любые щиты; пробой.</tooltip>
+	<damage>1</damage>
+	<missiles>1</missiles>
+	<shots>2</shots>
+	<sp>5</sp>
+	<stun>5</stun>
+	<fireChance>0</fireChance>
+	<breachChance>10</breachChance>
+	<stunChance>0</stunChance>
+	<cooldown>17</cooldown>
+	<power>3</power>
+	<cost>50</cost>
+	<bp>6</bp>
+	<rarity>0</rarity>
+	<image>kernel_projectile</image>
+	<launchSounds>
+		<sound>kernel_launch1</sound>
+		<sound>kernel_launch2</sound>
+		<sound>kernel_launch3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>kernel_2</weaponArt>
+	<iconImage>missile</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="KERNEL_CHAIN">
+	<type>MISSILES</type>
+	<tip>tip_missiles</tip>
+	<title>Зерномет с разогревом</title>
+	<short>З./раз.</short>
+	<desc>Единственное, что может остановить это орудие - недостаток боеприпасов.</desc>
+	<tooltip>Интервал между выстрелами снижается в ходе стрельбы.</tooltip>
+	<damage>1</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<stun>5</stun>
+	<fireChance>0</fireChance>
+	<breachChance>10</breachChance>
+	<stunChance>0</stunChance>
+	<cooldown>12</cooldown>
+	<power>3</power>
+	<cost>60</cost>
+	<bp>6</bp>
+	<rarity>0</rarity>
+	<image>kernel_projectile</image>
+	<boost>
+		<type>cooldown</type>
+		<amount>3</amount>
+		<count>3</count>
+	</boost>
+	<launchSounds>
+		<sound>kernel_launch1</sound>
+		<sound>kernel_launch2</sound>
+		<sound>kernel_launch3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>kernel_chain</weaponArt>
+	<iconImage>missile</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="KERNEL_CHAIN_ENEMY">
+	<type>MISSILES</type>
+	<tip>tip_missiles</tip>
+	<title>Зерномет с разогревом</title>
+	<short>З./раз.</short>
+	<desc>Единственное, что может остановить это орудие - недостаток боеприпасов.</desc>
+	<tooltip>Интервал между выстрелами снижается в ходе стрельбы.</tooltip>
+	<damage>1</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<stun>5</stun>
+	<fireChance>0</fireChance>
+	<breachChance>10</breachChance>
+	<stunChance>0</stunChance>
+	<cooldown>13.5</cooldown>
+	<power>4</power>
+	<cost>60</cost>
+	<bp>6</bp>
+	<rarity>0</rarity>
+	<image>kernel_projectile</image>
+	<boost>
+		<type>cooldown</type>
+		<amount>3.5</amount>
+		<count>3</count>
+	</boost>
+	<launchSounds>
+		<sound>kernel_launch1</sound>
+		<sound>kernel_launch2</sound>
+		<sound>kernel_launch3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>kernel_chain</weaponArt>
+	<iconImage>missile</iconImage>
+</weaponBlueprint>
+<shipBlueprint img="orchid_cruiser" layout="orchid_cruiser" name="PLAYER_SHIP_ORCHID">
+	<class>Крейсер орхидов</class>
+	<name>«Джуглан»</name>
+	<desc>Орхиды - хрупкие создания, особенно уязвимые к огню, поэтому они вынуждены полагаться на дронов и обман для победы в сражениях.</desc>
+	<systemList>
+		<pilot img="room_pilot_2" power="1" room="0" start="true">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<doors img="room_doors_7" power="2" room="6" start="true">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<sensors img="room_sensors" power="1" room="7" start="true">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<medbay img="room_medbay_3" power="1" room="4" start="true">
+			<slot>
+				<number>3</number>
+			</slot>
+		</medbay>
+		<clonebay power="1" room="4" start="false">
+			<slot>
+				<number>3</number>
+			</slot>
+		</clonebay>
+		<shields img="room_shields_3" power="2" room="3" start="true">
+			<slot>
+				<direction>left</direction>
+				<number>2</number>
+			</slot>
+		</shields>
+		<engines img="room_engines_3" power="1" room="13" start="true">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<weapons img="room_weapons_5" power="2" room="10" start="true">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+		<drones img="room_drones_orchid" power="3" room="9" start="true"/>
+		<teleporter power="1" room="5" start="false"/>
+		<cloaking img="room_cloaking_5" power="1" room="2" start="false"/>
+		<oxygen img="room_oxygen_2" power="1" room="1" start="true"/>
+		<battery img="room_battery_orchid" power="1" room="11" start="false"/>
+		<mind img="room_mind_7" power="1" room="8" start="true"/>
+		<hacking img="room_hacking_orchid" power="1" room="12" start="false">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</hacking>
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList count="1" missiles="15">
+		<weapon name="KERNEL_2"/>
+	</weaponList>
+	<droneList count="2" drones="15">
+		<drone name="BOARDER"/>
+		<drone name="REPAIR"/>
+	</droneList>
+	<aug name="ORCHID_RECYCLER"/>
+	<health amount="30"/>
+	<maxPower amount="9"/>
+	<crewCount amount="3" class="orchid"/>
+	<shieldImage>stealth</shieldImage>
+	<cloakImage>orchid_cruiser</cloakImage>
+</shipBlueprint>
+<shipBlueprint img="orchid_cruiser_autumn" layout="orchid_cruiser_autumn" name="PLAYER_SHIP_ORCHID_2">
+	<class>Крейсер орхидов</class>
+	<name>«Листопад»</name>
+	<desc>Несмотря на то, что орхиды - не самые лучшие бойцы врукопашную, их способности полезны для абордажных команд.</desc>
+	<systemList>
+		<pilot img="room_pilot" power="1" room="0" start="true">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<doors img="room_doors" power="2" room="3" start="true">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<sensors img="room_sensors_orchid_2" power="1" room="8" start="true">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</sensors>
+		<medbay img="room_medbay_2" power="1" room="7" start="true">
+			<slot>
+				<number>3</number>
+			</slot>
+		</medbay>
+		<clonebay power="1" room="7" start="false">
+			<slot>
+				<number>3</number>
+			</slot>
+		</clonebay>
+		<shields img="room_shields_orchid_2" power="2" room="6" start="true">
+			<slot>
+				<direction>down</direction>
+				<number>3</number>
+			</slot>
+		</shields>
+		<engines img="room_engines_8" power="1" room="14" start="true">
+			<slot>
+				<direction>left</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<weapons img="room_weapons_9" power="1" room="1" start="true">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+		<oxygen img="room_oxygen_orchid_3" power="1" room="9" start="true"/>
+		<teleporter power="1" room="2" start="true"/>
+		<drones img="room_drones_orchid_3" power="2" room="10" start="false"/>
+		<cloaking img="room_cloaking_orchid_3" power="1" room="11" start="false"/>
+		<battery img="room_battery_orchid_3" power="1" room="17" start="false"/>
+		<mind img="room_mind_5" power="1" room="12" start="false"/>
+		<hacking img="room_hacking_8" power="1" room="13" start="false">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</hacking>
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="1" missiles="15">
+		<weapon name="KERNEL_1"/>
+	</weaponList>
+	<droneList count="0" drones="0"/>
+	<health amount="30"/>
+	<maxPower amount="6"/>
+	<aug name="ORCHID_RECYCLER"/>
+	<crewCount amount="1" class="human"/>
+	<crewCount amount="1" class="orchid"/>
+	<crewCount amount="1" class="rock"/>
+	<crewCount amount="1" class="mantis"/>
+	<shieldImage>stealth</shieldImage>
+	<cloakImage>orchid_cruiser</cloakImage>
+</shipBlueprint>
+<shipBlueprint img="orchid_cruiser_strawberry" layout="orchid_cruiser_strawberry" name="PLAYER_SHIP_ORCHID_3">
+	<class>Крейсер орхидов</class>
+	<name>«Виктория»</name>
+	<desc>Этот крейсер использует технологии по переработке боеприпасов и мощный зерномет.</desc>
+	<systemList>
+		<pilot img="room_pilot_2" power="1" room="0" start="true">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<doors img="room_doors_orchid_3" power="2" room="14" start="true">
+			<slot>
+				<direction>down</direction>
+				<number>3</number>
+			</slot>
+		</doors>
+		<sensors img="room_sensors" power="1" room="10" start="false">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<medbay img="room_medbay" power="1" room="13" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<clonebay power="1" room="13" start="true">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<shields img="room_shields" power="2" room="6" start="true">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<engines img="room_engines_orchid_3" power="1" room="17" start="true">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<weapons img="room_weapons" power="3" room="7" start="true">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+		<drones img="room_drones_orchid_3" power="2" room="9" start="false"/>
+		<teleporter power="1" room="8" start="false"/>
+		<cloaking img="room_cloaking_orchid_3" power="1" room="11" start="false"/>
+		<oxygen img="room_oxygen_orchid_3" power="1" room="3" start="true"/>
+		<battery img="room_battery_13" power="1" room="1" start="false"/>
+		<mind img="room_mind_1" power="1" room="2" start="false"/>
+		<hacking img="room_hacking_4" power="1" room="12" start="false">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</hacking>
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="1" missiles="20">
+		<weapon name="KERNEL_CHAIN"/>
+	</weaponList>
+	<aug name="ORCHID_RECYCLER"/>
+	<droneList count="0" drones="0"/>
+	<health amount="30"/>
+	<maxPower amount="6"/>
+	<crewCount amount="1" class="anaerobic"/>
+	<crewCount amount="1" class="orchid"/>
+	<shieldImage>stealth</shieldImage>
+	<cloakImage>orchid_cruiser_strawberry</cloakImage>
+</shipBlueprint>
+</FTL>

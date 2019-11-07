@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FTL>
+<findName name="MANTIS_CREW" type="event">
+	<choice hidden="true" req="orchid">
+		<text>(Orchid) Fill the room with calming aroma before opening the escape pod.</text>
+		<event>
+			<text>The Mantis inside is resting. After waking up, they are happy to breathe fresh air, and move their limbs freely. The Mantis offers to join your crew until they can find the way home.</text>
+			<crewMember amount="1" class="mantis"/>
+		</event>
+	</choice>
+</findName>
+</FTL>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FTL>
+<findName name="NEBULA_ROCK_RACIST" type="event">
+	<choice hidden="true" req="orchid">
+		<text>(Орхид) Отправить члена команды для переговоров.</text>
+		<event>
+			<text>«Цветы? Для меня? Извините за невежливое поведение ранее». Вы ведете валунов к границе туманности, где облака рассеиваются. Валуны впечатлены и передают вам кое-какие припасы.</text>
+			<autoReward level="HIGH">standard</autoReward>
+		</event>
+	</choice>
+</findName>
+</FTL>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FTL>
+
+<mod:findName type="event" name="ROCK_QUEST_MARRIAGE">
+	<mod:findLike type="choice" reverse="false" start="0" limit="1">
+		<mod:findLike type="event">
+			<mod-append:choice hidden="true" req="orchid">
+				<text id="event_ROCK_QUEST_MARRIAGE_c1_orchid_choice"/>
+				<event>
+					<text id="event_ROCK_QUEST_MARRIAGE_c1_orchid_text"/>
+					<autoReward level="HIGH">scrap_only</autoReward>
+					<weapon name="BEAM_FIRE"/>
+					<crewMember amount="-1" class="orchid"/>
+				</event>
+			</mod-append:choice>
+		</mod:findLike>
+	</mod:findLike>
+</mod:findName>
+
+</FTL>

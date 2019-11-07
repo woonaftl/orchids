@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FTL>
+<findName name="DISTRESS_STATION_FIRE" type="event">
+	<findWithChildLike child-type="event" type="choice">
+		<selector load="DISTRESS_STATION_FIRE_CREW"/>
+		<setAttributes blue="false" lvl="0" max_group="0" req="orchid"/>
+	</findWithChildLike>
+	<choice blue="false" hidden="true" lvl="1" max_group="0" req="orchid">
+		<text>Отправить спасательный отряд на помощь обитателям станции.</text>
+		<event load="DISTRESS_STATION_FIRE_CREW_ORCHID"/>
+	</choice>
+</findName>
+<event name="DISTRESS_STATION_FIRE_CREW_ORCHID">
+	<text>Вы отправляете спасательный отряд на станцию. Один из орхидов отделился от основной группы и воспламенился. Вы швартуетесь, пытаясь эвакуировать пострадавшего, но он уже получил ожоги, несовместимые с жизнью. После произошедшего, отправлять орхидов тушить огонь не кажется настолько блестящей идеей.</text>
+	<removeCrew class="orchid">
+		<clone>true</clone>
+		<text>Через минуту из отсека репликации выходит клон погибшего, на своем опыте убедившись, что с огнем шутки плохи.</text>
+	</removeCrew>
+	<autoReward level="LOW">scrap_only</autoReward>
+</event>
+<findName name="STRANDED" type="eventList">
+	<findLike limit="1" reverse="false" start="1" type="event">
+		<choice hidden="true" req="orchid">
+			<text>(Орхид) Успокоить его перед тем, как доставить на корабль.</text>
+			<event load="MADMAN_ORCHID"/>
+		</choice>
+	</findLike>
+</findName>
+<eventList name="MADMAN_ORCHID">
+	<event>
+		<text>Оказавшись на борту корабля, человек расправляет плечи и успокаивается. Ему понадобится время, чтобы прийти в себя, но он рад присоединиться к вашей команде.</text>
+		<crewMember amount="1" class="human">Чарли</crewMember>
+	</event>
+	<event>
+		<text>Похоже, спасенный пострадал гораздо сильнее, чем вам казалось. По пути на корабль он теряет сознание. Кажется, он уже не выживет.</text>
+		<choice>
+			<text id="continue"/>
+			<event/>
+		</choice>
+		<choice hidden="true" lvl="2" req="medbay">
+			<text>(Улучшенный медотсек) Быстро доставить спасенного в медотсек.</text>
+			<event>
+				<text>Улучшенный медотсек вашего корабля стабилизирует пациента. Через какое-то время он приходит в себя и говорит вам, «Я думал, мне конец... Я уже несколько дней ничего не ел. Вы позволите мне остаться с вами?»</text>
+				<crewMember amount="1" class="human">Чарли</crewMember>
+			</event>
+		</choice>
+		<choice hidden="true" lvl="2" req="clonebay">
+			<text>(Улучшенный отсек репликации) Быстро зарегистрировать спасенного в базе данных отсека репликации.</text>
+			<event>
+				<text>Едва вы успеваете добавить физиологические параметры спасенного в базу данных репликатора, как он умирает. Когда его клон покидает капсулу, он трясет головой и говорит: «Почему я жив? Последнее, что я помню - как умер на борту посадочного аппарата. До чего дошла техника!»</text>
+				<crewMember amount="1" class="human">Чарли</crewMember>
+			</event>
+		</choice>
+	</event>
+</eventList>
+<findName name="DONOR_PONY" type="event">
+	<findLike limit="1" reverse="false" start="0" type="choice">
+		<findLike type="event">
+			<choice hidden="true" req="orchid">
+				<text>(Орхид) Поманить животных и осторожно привести их в трюм корабля на продажу.</text>
+				<event>
+					<text>Ваша команда без особого труда пасет шестиногих созданий в трюм используя химические сигналы. Вы продаете животных в экзотический ресторан на ближайшей планете.</text>
+					<autoReward level="HIGH">scrap_only</autoReward>
+				</event>
+			</choice>
+		</findLike>
+	</findLike>
+</findName>
+<findName name="ALISON_DEFECTOR" type="event">
+	<findLike limit="1" reverse="false" start="0" type="choice">
+		<findLike type="event">
+			<choice hidden="true" req="orchid">
+				<text>(Орхид) Очаровать человека, чтобы точно удержать его на нашей стороне.</text>
+				<event>
+					<text>Перебежчик повстанцев был ошеломлен, увидев орхида. Похоже, он не видел никого, кроме богомолов, до сегодняшнего дня. Плененный красотой орхида, человек занимает свой пост. Секунду спустя корабль повстанцев открывает огонь.</text>
+					<crewMember amount="1" class="human"/>
+				</event>
+			</choice>
+		</findLike>
+	</findLike>
+</findName>
+<findName name="DISTRESS_STATION_DISEASE" type="event">
+	<choice hidden="true" req="orchid">
+		<text>(Орхид) Отвлечь и успокоить зараженных.</text>
+		<event>
+			<text>Шахтеры-колонисты прежде никогда не видели орхидов, и он произвел неизгладимое впечатление. Будучи не в состоянии подхватить человеческие болезни, одаренные природной красотой и приятным ароматом, кажется, что орхиды были созданы только для успокоения испуганных людей.</text>
+			<autoReward level="MED">stuff</autoReward>
+		</event>
+	</choice>
+</findName>
+<!-- ORCHID SECTOR EVENT LISTS -->
+<eventList name="ITEMS_ORCHID">
+	<event load="ORCHID_FIND_DRONE"/>
+	<event load="ORCHID_FIND_WEAPON"/>
+	<event load="ORCHID_FREE_ITEMS"/>
+	<event load="ORCHID_FREE_CREW"/>
+	<event load="REFUEL_STATION"/>
+	<event load="REPAIR_STATION"/>
+	<event load="SELL_DRONES_STATION"/>
+	<event load="SELL_MISSILES_STATION"/>
+	<event load="TRADER_CIV"/>
+	<event load="TAVERN_HIRE"/>
+	<event load="TRADER_UPGRADES"/>
+	<event load="TRADER_UPGRADES_EXCHANGE"/>
+</eventList>
+<eventList name="DISTRESS_BEACON_ORCHID">
+	<event load="TRAP_BEACON"/>
+	<event load="STRANDED_BEACON"/>
+	<event load="ESCORT_BEACON"/>
+	<event load="DISTRESS_SATELLITE_DEFENSE"/>
+	<event load="DISTRESS_STATION_FIRE"/>
+	<event load="REFUGEE_GHOST"/>
+	<event load="REFUGEE_DISTRESS"/>
+	<event load="ORCHID_DISTRESS_EMPTY_SHIP"/>
+	<event load="ORCHID_DISTRESS_COLONY_FIRE"/>
+</eventList>
+<eventList name="QUESTS_ORCHID">
+	<event load="QUEST_ESCORT"/>
+	<event load="MERCHANT_REQUEST"/>
+	<event load="FEDERATION_PLANET_SIGNAL"/>
+	<event load="ORCHID_ZOLTAN_QUEST_START"/>
+</eventList>
+<eventList name="NEUTRAL_ORCHID">
+	<event load="MERCENARY"/>
+	<event load="REFUGEE_NO_DISTRESS"/>
+	<event load="FUELING_STATION"/>
+	<event load="ORCHID_UNDER_ATTACK_PIRATE"/>
+	<event load="ORCHID_UNARMED_TRADER"/>
+	<event load="ORCHID_SLAVES"/>
+	<event load="ORCHID_BOTANICAL_GALLERY"/>
+	<event load="ORCHID_SLUG_TAUNT"/>
+</eventList>
+<eventList name="HOSTILE_ORCHID">
+	<event load="ORCHID_FIGHT"/>
+	<event load="ORCHID_FIGHT"/>
+	<event load="ORCHID_PIRATE_FIGHT"/>
+	<event load="ORCHID_ROCK_FIGHT"/>
+	<event load="ORCHID_MANTIS_FIGHT"/>
+	<event load="ORCHID_REBEL_FIGHT"/>
+	<event load="ORCHID_AUTO_FIGHT"/>
+	<event load="ORCHID_CAPTURED_REBEL_FIGHT"/>
+	<event load="ORCHID_PIRATE_FRIENDLY_ASB"/>
+</eventList>
+<!-- ORCHID SECTOR EVENTS -->
+<!-- STRUCTURE -->
+<event name="START_BEACON_ORCHID">
+	<text>Пытаясь оторваться от флота повстанцев вы прыгаете в сектор орхидов. Несмотря на название, данное людьми, у орхидов мало общего с земными растениями.</text>
+</event>
+<event name="STORE_ORCHID" unique="false">
+	<text load="STORE_ORCHID"/>
+	<store/>
+</event>
+<textList name="STORE_ORCHID">
+	<text>На этом маяке располагается крупный торговый центр орхидов. Несмотря на то, что большая часть их оборудования изготовлена из растительного сырья, орхиды тоже находят применение для металлолома и готовы торговать им.</text>
+	<text>Прямо около маяка находится гигантская торговая станция орхидов под охраной нескольких военных кораблей. Вы стыкуетесь и заходите на станцию. Вас поражает, насколько тихо и спокойно внутри.</text>
+	<text>Одинокое торговое судно орхидов ждет вас у маяка. Его команда отправляет вам простое сообщение: «Оружие по доступным ценам».</text>
+	<text>Вы наткнулись на торговую станцию орхидов, продающую потребительские товары, изготовленные из органических материалов, происходящих с родной планеты орхидов. Узнав, что вы представляете Федерацию, орхиды соглашаются продавать и оружие.</text>
+</textList>
+<event name="NOTHING_ORCHID" unique="false">
+	<text load="NOTHING_ORCHID"/>
+</event>
+<textList name="NOTHING_ORCHID">
+	<text>Секторы орхидов славится спокойным умиротворяющим характером. Этот маяк подтверждает это.</text>
+	<text back="BG_DARK" planet="NONE">Маяк служит исключительно для транзита. Вы замечаете, как далеко от местной звезды он расположен. Вероятно, как средство защиты от солнечных вспышек.</text>
+	<text planet="PLANET_UNPOPULATED">Вы достигаете маяка, расположенного рядом с планетой, находящейся в процессе терраформирования для поддержки жизни растений. Вокруг нет кораблей.</text>
+	<text back="BG_DARK" planet="NONE">Сейчас на этом маяке ничего не происходит. Звезда слишком тусклая, обеспечивая недостаточно энергии для флоры, зависимой от света.</text>
+</textList>
+<!-- ITEMS -->
+<event name="ORCHID_FIND_DRONE" unique="false">
+	<text load="ORCHID_FIND_DRONE"/>
+	<autoReward level="LOW">drone</autoReward>
+</event>
+<textList name="ORCHID_FIND_DRONE">
+	<text>Из-за того, что орхиды хрупки и уязвимы, они часто прибегают к использованию дронов для помощи в управлении кораблями. На маяке расположен завод по производству дронов, все еще лояльный Федерации. Инженеры орхидов предлагают одно из своих творений бесплатно.</text>
+	<text>Грузовое судно орхидов ждет у маяка. Как только вы завершаете маневр, они отправляют сообщение за сообщением: «Слишком много груза. Не могу двигаться. Пожалуйста, возьмите вот это».</text>
+	<text>Пока сверхсветовой двигатель заряжается, вы решаете исследовать поверхность близлежащей планеты. В листве гигантского дерева вы находите разряженный дрон, вероятно, оставленный пиратами. Пригодится в вашем путешествии.</text>
+</textList>
+<event name="ORCHID_FIND_WEAPON" unique="false">
+	<text load="ORCHID_FIND_WEAPON"/>
+	<autoReward level="LOW">weapon</autoReward>
+</event>
+<textList name="ORCHID_FIND_WEAPON">
+	<text>Вы удивлены, обнаружив секретную станцию Федерации в глубине территории орхидов. Его команда зашла так далеко, что спрятала базу, используя любимые материалы орхидов: листья и кору. Союзники предлагают орудие, которое должно помочь в вашем путешествии.</text>
+	<text>Колония орхидов на близлежащей планете соглашается отдать вам орудие в обмен на несколько редких образцов растений с вашей родной планеты, которые вам посчастливилось иметь под рукой.</text>
+	<text>Как только вы совершаете прыжок, корабль орхидов поблизости взрывается по неизвестной причине. Всё, что осталось после взрыва, - это расплавленные металлические обломки и одно невредимое орудие.</text>
+</textList>
+<event name="ORCHID_FREE_ITEMS" unique="false">
+	<text load="ORCHID_FREE_ITEMS"/>
+	<autoReward level="MED">standard</autoReward>
+</event>
+<textList name="ORCHID_FREE_ITEMS">
+	<text>Щедрые орхиды со станции на маяке предлагают металлолом бесплатно. «Нам это не нужно. Мы предпочитаем титановое дерево».</text>
+	<text back="BG_DARK" planet="NONE">Маяк пуст, вокруг нет ни кораблей, ни звезд. Одинокий контейнер, напоминающий по форме гигантское семечко, дрейфует в космосе. Внутри есть немного металлолома и других полезных ресурсов.</text>
+	<text back="BG_DARK" planet="NONE">Маяк расположен далеко от населенных систем орхидов. Останки разрушенных кораблей дрейфуют неподалеку: последствия давней битвы. Вы собираете, что можете.</text>
+</textList>
+<event name="ORCHID_FREE_CREW" unique="true">
+	<text>Вы встречаете гигантский лайнер орхидов, сопровождаемый несколькими крейсерами. Один из пассажиров связывается с вами, используя самодельный коммуникатор: «Возьмите меня, пожалуйста. Я могу драться. Я украл шлюпку».</text>
+	<choice>
+		<text>Предложить им служить Федерации на вашем корабле.</text>
+		<event>
+			<text>Новичок оказался молодым орхидом. Он принимает боевую позу и выделяет химические вещества, которые наполняют вашу команду решимостью.</text>
+			<crewMember amount="1" class="orchid"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Отказать.</text>
+		<event/>
+	</choice>
+</event>
+<!-- DISTRESS -->
+<event name="ORCHID_DISTRESS_EMPTY_SHIP" unique="true">
+	<distressBeacon/>
+	<ship hostile="false" load="ORCHID_SHIP"/>
+	<text>Сигнал бедствия исходит от корабля орхидов, заблудившегося далеко от обычных межзвездных маршрутов. Вы спрашиваете, что произошло на корабле, но ответа нет.</text>
+	<choice hidden="true">
+		<text>Отправить команду, чтобы исследовать корабль.</text>
+		<event load="ORCHID_DISTRESS_EMPTY_SHIP_LIST"/>
+	</choice>
+	<choice hidden="true">
+		<text>Покинуть сектор.</text>
+		<event/>
+	</choice>
+</event>
+<eventList name="ORCHID_DISTRESS_EMPTY_SHIP_LIST">
+	<event>
+		<text>Исследование показало, что на корабле произошел пожар. Вы можете только догадываться, что послужило причиной аварии. Большая часть оборудования сожжена, в живых никого не осталось, но зато вам удалось найти металлолом и другие полезные ресурсы.</text>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+	<event>
+		<text>Единственное разумное существо, выжившее на корабле, - обезвоженный орхид. На корабле закончились запасы воды, а система жизнеобеспечения вышла из строя. Вся команда мертва, кроме одного орхида, которую удалось вовремя полить и спасти.</text>
+		<crewMember amount="1" class="orchid"/>
+	</event>
+	<event>
+		<text>Ваша команда отправилась на корабль с целью найти выживших. Через некоторое время часть команды была подвержена воздействию неизвестных веществ, вызвавших приступ ярости. Как можно быстрее все были возвращены домой, но один из членов экипажа так сильно пострадал, что сошел с ума сразу после возвращения.</text>
+		<choice hidden="true" req="orchid">
+			<text>(Член экипажа орхид) Пусть орхид успокоит безумного.</text>
+			<event>
+				<text>Орхид распыляет успокаивающую пыльцу, и безумец постепенно приходит в себя. Вся команда облегчённо вздыхает.</text>
+			</event>
+		</choice>
+		<choice hidden="true" req="CREW_STIMS">
+			<text>(Феромоны богомолов) Накачать его феромонами.</text>
+			<event>
+				<text>Как только свежая порция феромонов попадает в лёгкие заболевшего, ему становится лучше. Конец был близок.</text>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text id="continue"/>
+			<event>
+				<text>Вам ничего не остаётся кроме как прикончить бедолагу.</text>
+				<crewMember amount="-1" class="traitor"/>
+			</event>
+		</choice>
+	</event>
+</eventList>
+<event name="ORCHID_DISTRESS_COLONY_FIRE" unique="true">
+	<distressBeacon/>
+	<text>Сигнал бедствия поступил с поверхности планеты возле маяка. Лесной пожар распространяется в сторону небольшую колонию орхидов, сил которой недостаточно ни для тушения, ни для своевременной эвакуации.</text>
+	<choice hidden="true">
+		<text>Помочь спасти как можно больше орхидов.</text>
+		<event>
+			<text>Экосистема на планете орхидов оказалась настолько уязвима к пожарам, что даже усилий всей вашей команды недостаточно, чтобы вовремя спасти колонию. Вам удалось помочь наиболее выносливым существам, но большинство семян и младенцев сгорели.</text>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Нас не заботят проблемы растений.</text>
+		<event/>
+	</choice>
+	<choice hidden="true" req="FIRE_EXTINGUISHERS">
+		<text>(Система пожаротушения) Использовать модуль для спасения колонии.</text>
+		<event>
+			<text>Система пожаротушения развернута в колонии в сжатые сроки. Она помогает сдерживать пожары в ключевых точках, пока орхиды эвакуируются. Один из орхидов настолько впечатлен, что просит присоединиться к команде.</text>
+			<crewMember amount="1" class="orchid"/>
+		</event>
+	</choice>
+	<choice hidden="true" req="CREW_STIMS">
+		<text>(Феромоны богомолов) Использовать модуль для ускорения эвакуации.</text>
+		<event>
+			<text>Под воздействием феромонов как ваша команда, так и орхиды двигаются намного быстрее, что существенно облегчило эвакуацию. Вся колония спасена и один из орхидов настолько впечатлен, что просит присоединиться к команде.</text>
+			<crewMember amount="1" class="orchid"/>
+		</event>
+	</choice>
+	<choice hidden="true" req="crystal">
+		<text>(Кристалл) Остановить распространение пожаров.</text>
+		<event>
+			<text>Ваша команда возводит гигантские кристаллические стены за считанные секунды. Распространение пожара удалось замедлить, и вся колония успешно эвакуировалась. Один из орхидов настолько впечатлен, что просит присоединиться к команде.</text>
+			<crewMember amount="1" class="orchid"/>
+		</event>
+	</choice>
+	<choice hidden="true" req="BOMB_LOCK">
+		<text>(Кристальная блок-бомба) Остановить распространение пожаров.</text>
+		<event>
+			<text>С помощью бомбы удалось возвести гигантские кристаллические стены за считанные секунды. Распространение пожара удалось замедлить, и вся колония успешно эвакуировалась. Один из орхидов настолько впечатлен, что просит присоединиться к команде.</text>
+			<crewMember amount="1" class="orchid"/>
+			<item_modify>
+				<item max="-2" min="-2" type="missiles"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice hidden="true" req="DRONE_SPEED">
+		<text>(Форсаж для дронов) Отправить форсированных дронов на помощь.</text>
+		<event>
+			<text>Боевые дроны перепрограммированы и используются для спасения орхидов. Они несут семена, младенцев и ценные вещи, тушат пожары и выручают колонию. Один из орхидов настолько впечатлен, что просит присоединиться к команде.</text>
+			<crewMember amount="1" class="orchid"/>
+			<item_modify>
+				<item max="-2" min="-2" type="drones"/>
+			</item_modify>
+		</event>
+	</choice>
+</event>
+<!-- QUESTS -->
+<event name="ORCHID_ZOLTAN_QUEST_START" unique="true">
+	<text>Вас приветствует мирный корабль золтан. «Наше судно находится на дипломатической миссии в мире орхидов. Мы можем предложить достаточно простую работу, нужно доставить небольшой подарок совету орхидов, чтобы возвестить о нашем прибытии».</text>
+	<choice hidden="true">
+		<text>Согласиться подработать курьером.</text>
+		<event>
+			<text>Золтаны передают координаты и контейнер с подарком орхидам. В упаковке находится небольшая копия космического золтанского корабля необычной формы, излучающая свет и тепло. Копия сделана из высококачественных металлов, устойчива к повреждениям, на нее очень приятно смотреть.</text>
+			<quest event="ORCHID_ZOLTAN_QUEST_FINISH"/>
+			<autoReward level="LOW">standard</autoReward>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Отказаться.</text>
+		<event/>
+	</choice>
+</event>
+<event name="ORCHID_ZOLTAN_QUEST_FINISH">
+	<text>Вы прибываете в систему, указанную ранее золтанами, с целью доставить их подарок, и представляете его совету орхидов. Несмотря на то, что сами они не могут говорить, Орхидеи прекрасно понимают любой язык. Они кажутся довольными и предлагают вам небольшую награду.</text>
+	<autoReward level="MED">standard</autoReward>
+</event>
+<!-- NEUTRAL -->
+<event name="ORCHID_UNDER_ATTACK_PIRATE" unique="false">
+	<text>Безоружное судно орхидов пытается спастись бегством от корабля космических пиратов, преследующих орхидов.</text>
+	<choice hidden="true">
+		<text>Помочь кораблю орхидов.</text>
+		<event>
+			<text>Вы делаете предупредительный выстрел, и пиратский корабль меняет направление и движется к вам. «Этот корабль еще больше! Пустим его на лом». Корабль орхидов остановился на безопасном расстоянии.</text>
+			<ship hostile="true" load="ORCHID_UNDER_ATTACK_PIRATE_SHIP"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Не вмешиваться.</text>
+		<event/>
+	</choice>
+</event>
+<ship auto_blueprint="SHIPS_PIRATE" name="ORCHID_UNDER_ATTACK_PIRATE_SHIP">
+	<destroyed>
+		<text>Пиратский корабль разваливается на куски. Вы спешно связываетесь с судном орхидов.</text>
+		<autoReward level="MED">standard</autoReward>
+		<choice hidden="true">
+			<text>Связаться с судном орхидов.</text>
+			<event load="ORCHID_SAVED_LIST"/>
+		</choice>
+	</destroyed>
+	<deadCrew>
+		<text>Сенсоры не обнаруживают на борту пиратского корабля признаков жизни. Вы спешно связываетесь с судном орхидов.</text>
+		<autoReward level="HIGH">standard</autoReward>
+		<choice hidden="true">
+			<text>Связаться с судном орхидов.</text>
+			<event load="ORCHID_SAVED_LIST"/>
+		</choice>
+	</deadCrew>
+</ship>
+<eventList name="ORCHID_SAVED_LIST">
+	<event>
+		<text>Корпус корабля орхидов получил тяжелые повреждения, прежде чем вы подоспели на помощь. Единственный выживший орхид просит присоединиться к вашей команде.</text>
+		<crewMember amount="1" class="orchid"/>
+	</event>
+	<event>
+		<text>Корабль орхидов предлагает вам немного ресурсов в качестве награды за их спасение.</text>
+		<autoReward level="LOW">standard</autoReward>
+	</event>
+	<event>
+		<text>Пока вы сражались с пиратом, корабль орхидов зарядил сверхсветовой двигатель и покинул систему.</text>
+	</event>
+</eventList>
+<event name="ORCHID_UNARMED_TRADER" unique="true">
+	<text>Крошечное торговое судно орхидов ждет вас у маяка. Узнав, что вы представляете силы Федерации, они предлагают часть своих припасов, чтобы помочь общему делу.</text>
+	<choice>
+		<text>Принять их предложение.</text>
+		<event>
+			<autoReward level="LOW">standard</autoReward>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Потребовать всё, что у них есть, угрожая силой.</text>
+		<event load="ORCHID_UNARMED_TRADER_EXTORTION"/>
+	</choice>
+</event>
+<eventList name="ORCHID_UNARMED_TRADER_EXTORTION">
+	<event>
+		<text>Торговое судно посылает сигнал бедствия, и военный корабль орхидов незамедлительно совершает прыжок в систему, заряжая орудия.</text>
+		<ship hostile="true" load="ORCHID_UNARMED_TRADER_EXTORTION_SHIP"/>
+	</event>
+	<event>
+		<text>Корабль орхидов послал сигнал бедствия с просьбой о помощи... Но никто не пришел. Они вынуждены отдать весь свой товар, надеясь, что тогда вы их пощадите.</text>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+</eventList>
+<ship auto_blueprint="SHIPS_ORCHID" name="ORCHID_UNARMED_TRADER_EXTORTION_SHIP">
+	<destroyed>
+		<text>Пока вы разбирались с военным кораблем орхидов, торговое судно уже покинуло систему. Вы добываете лом из разрушенного корабль, собирая полезный лом.</text>
+		<autoReward level="MED">standard</autoReward>
+	</destroyed>
+	<deadCrew>
+		<text>Пока вы разбирались с военным кораблем орхидов, торговое судно уже покинуло систему. Вы добываете все ресурсы, которые могут пригодиться, из захваченного корабля.</text>
+		<autoReward level="HIGH">standard</autoReward>
+	</deadCrew>
+</ship>
+<event name="ORCHID_SLAVES" unique="true">
+	<text>Корабль, занимающийся незаконной торговлей, выходит на связь: «Дешевые работники! Также могут работать как кислородные генераторы, пушечное мясо, подарки местным вождям, дрова или здоровая пища».</text>
+	<ship hostile="false" load="ORCHID_SLAVES_SHIP"/>
+	<choice hidden="true">
+		<text>Спасти порабощенных орхидов!</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Купить раба-орхида.</text>
+		<event>
+			<crewMember amount="1" class="orchid"/>
+			<item_modify>
+				<item max="-20" min="-30" type="scrap"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Отказаться и покинуть систему.</text>
+		<event/>
+	</choice>
+</event>
+<ship auto_blueprint="SHIPS_PIRATE" name="ORCHID_SLAVES_SHIP">
+	<surrender chance="0.2" max="4" min="2">
+		<text>Работорговцы капитулируют: «Выгодное предложение: работник бесплатно! Только прекратите огонь».</text>
+		<choice>
+			<text>Принять предложение.</text>
+			<event>
+				<crewMember amount="1"/>
+				<ship hostile="false"/>
+			</event>
+		</choice>
+		<choice>
+			<text>О капитуляции не может быть и речи.</text>
+			<event/>
+		</choice>
+	</surrender>
+	<escape chance="0.5" load="PIRATE_ESCAPE" max="4" min="2"/>
+	<destroyed>
+		<text>Корабль работорговцев уничтожен. Больше они никому не причинят зла, но вместе с ними погибло немало невинных пленников.</text>
+		<autoReward level="MED">standard</autoReward>
+	</destroyed>
+	<deadCrew>
+		<text>Все надсмотрщики мертвы, и один из освобожденных рабов-орхидов принимает предложение вступить в вашу команду.</text>
+		<crewMember amount="1" class="orchid"/>
+		<autoReward level="MED">standard</autoReward>
+	</deadCrew>
+</ship>
+<event name="ORCHID_BOTANICAL_GALLERY" unique="true">
+	<text>У маяка расположена гигантская станция орхидов, отмеченная на звездной карте как «Контактная ботаническая галерея».</text>
+	<choice hidden="true">
+		<text>Посетить станцию.</text>
+		<event>
+			<text>Зал для посетителей наполнен атмосферой спокойствия с небольшим оттенком любопытства. В галерее много представлено множество необычных экспонатов. Вы задаетесь вопросом, что посетить.</text>
+			<choice>
+				<text>Заплатить за посещение «Воздушной кукурузы».</text>
+				<event>
+					<text>Экспонат содержит гигантскую сферу, защищенную со всех сторон усиленным металлическим покрытием. Внутри сферы растут деревья-исполины. И это всё?</text>
+					<item_modify>
+						<item max="-9" min="-12" type="scrap"/>
+					</item_modify>
+					<choice hidden="true">
+						<text id="continue"/>
+						<event>
+							<text>Внезапно серия взрывов сотрясает станцию. Плоды деревьев лопаются, выпуская гигантские зерна во все стороны. Защитная сфера едва устояла перед взрывающимися зернами. Орхид-работник станции предлагает зерномет в подарок.</text>
+							<weapon name="KERNEL_1"/>
+						</event>
+					</choice>
+				</event>
+			</choice>
+			<choice>
+				<text>Заплатить за посещение «Натурального луга».</text>
+				<event>
+					<text>Экспонат содержит поле ... травы. По внешнему виду это обычная трава с Земли, довольно высокая, с невзрачными цветами, и странно знакомой формой листьев. Оно того стоило?</text>
+					<item_modify>
+						<item max="-9" min="-12" type="scrap"/>
+					</item_modify>
+					<choice hidden="true">
+						<text id="continue"/>
+						<event>
+							<text>Через несколько минут на лугу вы чувствуете беззаботность, желание смеяться, и непреодолимую силу, заставляющую обнять богомола рядом. Через некоторое время вы и богомол, который оказался другим посетителем, становитесь лучшими друзьями, и он соглашается присоединиться к вашей команде.</text>
+							<crewMember amount="1" class="mantis"/>
+						</event>
+					</choice>
+				</event>
+			</choice>
+			<choice>
+				<text>Заплатить за посещение «Самогонного аппарата».</text>
+				<event>
+					<text>Этот экспонат представляет собой необычную машину, полностью изготовленную из растительных материалов. Машина выкачивает сок из стройных деревьев с белой корой и перерабатывает его, получая на выходе жидкость, рекламируемую как высококачественное FTL-топливо.</text>
+					<item_modify>
+						<item max="-9" min="-12" type="scrap"/>
+					</item_modify>
+					<choice hidden="true">
+						<text id="continue"/>
+						<event>
+							<text>Поскольку вы уже заплатили за вход, орхиды предлагают немного экспериментального топлива бесплатно.</text>
+							<item_modify>
+								<item max="7" min="5" type="fuel"/>
+							</item_modify>
+						</event>
+					</choice>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Не посещать ничего.</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Зарядить сверхсветовой двигатель.</text>
+		<event/>
+	</choice>
+</event>
+<event name="ORCHID_SLUG_TAUNT" unique="true">
+	<text>Вы удивлены, увидев корабль слизней в системе, преимущественно населенной орхидами. Слизни открыли зашифрованный канал для связи и приглашают вас присоединиться.</text>
+	<ship hostile="false" load="JELLY"/>
+	<choice hidden="true">
+		<text>Поговорить со слизнями.</text>
+		<event>
+			<text>«Привет, двуногий мешок мяссса. Мы иссскали такой прекрасссный экссспонат в течение ссстолетия. Нам очень жаль, но ты - самый уродливый человек в галактике, и заслуживаешь того, чтобы тебя забальзамировали и выставили в музее. Боюсссь себе представить, как выглядит твоя мама».</text>
+			<choice hidden="true">
+				<text>Открыть огонь!</text>
+				<event>
+					<text>Вы стреляете по кораблю слизней, но они ловко уклоняются. Капитан слизней посылает сообщение о бедствии на соседнюю планету орхидов, утверждая, что на него напали пираты. К вашему удивлению, орхиды открывают огонь из всех орудий планетарной обороны по вашему кораблю. Все это было частью коварного плана слизней.</text>
+					<ship hostile="true"/>
+					<environment target="player" type="PDS"/>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Прекратить сеанс связи.</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Отказаться.</text>
+		<event/>
+	</choice>
+</event>
+<!-- HOSTILE -->
+<event name="ORCHID_FIGHT" unique="false">
+	<text load="ORCHID_FIGHT"/>
+	<ship hostile="true" load="ORCHID_SHIP"/>
+</event>
+<textList name="ORCHID_FIGHT">
+	<text>Враждебный корабль орхидов ждет вас у маяка. Без единого слова они открывают огонь.</text>
+	<text>Орхиды на маяке ведут себя необычайно агрессивно. Один из кораблей движется в вашу сторону, готовя орудия к залпу. Сканирование показывает, что экипаж болен инопланетными паразитами.</text>
+	<text>Военный корабль орхидов приближается и сканирует ваш корабль. Обнаружив, что вы вооружены, орхиды заряжают орудия, чтобы защитить свою территорию.</text>
+	<text>Многословный корабль орхидов отправляет вам сообщение за сообщением: «Мы узнали о том, что вы, инопланетяне, питаетесь разумными растения после приготовления их на огне! За это преступление вы будете наказаны»!</text>
+	<text>Корабль орхидов ожидает вас у маяка. На экране для переговоров появляется зловещее сообщение: «В этом мире... УБЕЙ или БУДЕШЬ УБИТЫМ».</text>
+</textList>
+<event name="ORCHID_SURRENDER">
+	<text load="ORCHID_SURRENDER"/>
+	<choice>
+		<text>Принять предложение.</text>
+		<event>
+			<ship hostile="false"/>
+			<autoReward level="RANDOM">stuff</autoReward>
+		</event>
+	</choice>
+	<choice>
+		<text>Никакой пощады врагам!</text>
+		<event/>
+	</choice>
+</event>
+<textList name="ORCHID_SURRENDER">
+	<text>Корабль орхидов отключает все орудия, надеясь, что вы сделаете то же самое.</text>
+	<text>Корабль орхидов почти уничтожен. Его команда посылает вам изображения, символизирующие мир и ценный груз, вероятно, с просьбой сдаться.</text>
+	<text>Орхиды на экране отчаянно махают листьями и долбят стеблями по клавиатуре. Спустя несколько секунд вы получаете сообщение, полное опечаток: «мы сдаесчя, прекратите огнь!»</text>
+</textList>
+<event name="ORCHID_PIRATE_FIGHT" unique="false">
+	<text load="ORCHID_PIRATE_FIGHT"/>
+	<ship hostile="true" load="PIRATE"/>
+</event>
+<textList name="ORCHID_PIRATE_FIGHT">
+	<text>Орхиды прилагают колоссальные усилия для поддержания безопасности в своих мирах, но одинокий пират все же сумел пробиться даже через их оборону. Сражения не миновать.</text>
+	<text>Секторы орхидов считаются относительно безопасными и привлекают торговцев и беженцев. Те, в свою очередь, привлекают пиратов.</text>
+	<text>Корабль с пиратским черепом на борту ждет вас у маяка. Вы подслушиваете разговор на их корабле: «Это не космическая травка». "Неважно. Огонь."</text>
+	<text planet="PLANET_POPULATED">Вы наслаждались видом заросшей джунглями планеты орхидов, как внезапно пират появился из ниоткуда. Конфликт неизбежен.</text>
+</textList>
+<event name="ORCHID_ROCK_FIGHT" unique="false">
+	<text load="ORCHID_ROCK_FIGHT"/>
+	<ship hostile="true" load="ROCK_SHIP"/>
+</event>
+<textList name="ORCHID_ROCK_FIGHT">
+	<text>Корабли валунов часто встречаются в секторах орхидов. Несмотря на их неприязнь к пришельцам, валуны высоко ценят орхидов. Корабль у маяка, однако, ведет себя враждебно по отношению к вам.</text>
+	<text>Орхиды находят валунов очень полезными союзниками за их способность противостоять огню, и учитывая как легко ими манипулировать. Корабль валунов у маяка расценивает вас как угрозу их растительным повелителям и атакует!</text>
+	<text>Секторы орхидов очень популярны среди богатых путешественников-валунов. Тело, поросшее редкими растениями, считается модным в культуре валунов. Корабль у маяка считает, что вы выглядите угрожающе и нападает.</text>
+</textList>
+<event name="ORCHID_MANTIS_FIGHT" unique="false">
+	<text load="ORCHID_MANTIS_FIGHT"/>
+	<ship hostile="true" load="MANTIS_FIGHT"/>
+</event>
+<textList name="ORCHID_MANTIS_FIGHT">
+	<text>Воинственные богомолы отправляют свои корабли по всей галактике, для того, чтобы охотиться на другие корабли ради добычи и славы. Секторы орхидов - не исключение.</text>
+	<text>Орхиды прилагают огромные усилия для умиротворения вторгающихся богомолов и установления более теплых отношений с ними. Но некоторые богомолы никогда не покинут тропу войны. Корабль у маяка принадлежит именно таким.</text>
+	<text>Некоторые богомолы были настолько подвержены влиянию орхидов, что поклоняются растениям и делают единственное, что, по их мнению, порадует их богов: убивают всех чужаков.</text>
+</textList>
+<event name="ORCHID_REBEL_FIGHT" unique="false">
+	<text load="ORCHID_REBEL_FIGHT"/>
+	<ship hostile="true" load="REBEL"/>
+</event>
+<textList name="ORCHID_REBEL_FIGHT">
+	<text>Истребитель повстанцев ожидает вас у маяка. На экране появляется изображение офицера-человека: «Мы пришли, чтобы прополоть этот сектор от инопланетян и сторонников Федерации. Начиная с вас!»</text>
+	<text>Агрессивно настроенный корабль повстанцев выбрал маяк вдали от основных миров орхидов, чтобы дожидаться вашего возможного прибытия. Как только повстанцы вас увидели, корабль тут же пришел в движение с заряженными орудиями.</text>
+	<text>Этот маяк был отмечен как населенный союзниками-орхидами на звездных картах, но флот повстанцев уже начал захватывать его. Один из разведывательных кораблей повстанцев атакует.</text>
+</textList>
+<event name="ORCHID_AUTO_FIGHT" unique="false">
+	<text load="ORCHID_AUTO_FIGHT"/>
+	<ship hostile="true" load="REBEL_AUTO"/>
+</event>
+<textList name="ORCHID_AUTO_FIGHT">
+	<text>Узнав, что многие корабли Федерации используют родные миры орхидов в качестве укрытия, повстанцы отправили беспилотники, чтобы охотиться на всех, кто противостоит Восстанию. Один из таких кораблей ждет вас у маяка.</text>
+	<text>Беспилотный корабль транслирует сообщение: «Любое существование растений запрещено. В этом секторе допускаются только люди. Слава восстанию». Он настроен враждебно ко всем, кроме повстанцев.</text>
+	<text>Останки гражданского корабля орхидов дрейфуют у маяка. Виновник, беспилотный корабль повстанцев, разворачивается и движется к вам, заряжая орудия.</text>
+</textList>
+<event name="ORCHID_CAPTURED_REBEL_FIGHT" unique="false">
+	<text load="ORCHID_CAPTURED_REBEL_FIGHT"/>
+	<ship hostile="true" load="ORCHID_CAPTURED_REBEL_SHIP"/>
+</event>
+<textList name="ORCHID_CAPTURED_REBEL_FIGHT">
+	<text>Вы удивлены, услышав, как экипаж корабля орхидов говорит человеческим голосом: «Сдавайтесь. Все близлежащие миры контролируются силами Восстания. Сопротивление бесполезно».</text>
+	<text>Корабль орхидов ведет себя более агрессивно, чем обычно. Сканирование показывает, что корабль захвачен людьми в униформах повстанцев.</text>
+	<text>Корабль орхидов, расположенный у маяка, движется взад и вперед. Повстанцы, захватившие корабль, еще не научились управлять им, но уже нападают на вас.</text>
+</textList>
+<ship auto_blueprint="SHIPS_ORCHID" name="ORCHID_CAPTURED_REBEL_SHIP">
+	<surrender chance="0.5" load="PIRATE_SURRENDER" max="3" min="2"/>
+	<escape chance="0.5" load="PIRATE_ESCAPE" max="4" min="3"/>
+	<destroyed load="DESTROYED_DEFAULT"/>
+	<deadCrew load="DEAD_CREW_DEFAULT"/>
+	<crew>
+		<crewMember prop="1" type="human"/>
+	</crew>
+</ship>
+<event name="ORCHID_PIRATE_FRIENDLY_ASB" unique="true">
+	<img back="BACKGROUND" planet="PLANET_POPULATED"/>
+	<text>Пиратский корабль, потрепанный в многочисленных сражениях, движется в вашу сторону из-за планеты орхидов. Может быть, пришло время проверить насколько на самом деле хорошо орхиды следят за безопасностью своих систем?</text>
+	<ship hostile="true" load="PIRATE"/>
+	<choice hidden="true">
+		<text>Сразиться с пиратом один на один.</text>
+		<event/>
+	</choice>
+	<choice hidden="true">
+		<text>Попросить о помощи.</text>
+		<event>
+			<text>Вы посылаете сигнал бедствия, и военная база орхидов, размещенная на планете, тут же отвечает и использует систему планетарной обороны против пиратов.</text>
+			<environment target="enemy" type="PDS"/>
+		</event>
+	</choice>
+</event>
+</FTL>

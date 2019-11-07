@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FTL>
+
+<mod:findName type="systemBlueprint" name="oxygen">
+	<mod:findLike type="cost">
+		<mod:setValue>60</mod:setValue>
+	</mod:findLike>
+</mod:findName>
+
+<crewBlueprint name="orchid">
+	<title id="crew_orchid_title"/>
+	<short id="crew_orchid_short"/>
+	<desc id="crew_orchid_desc"/>
+	<cost>50</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<powerList>
+		<power id="crew_orchid_power_1"/>
+		<power id="crew_orchid_power_2"/>
+		<power id="crew_orchid_power_3"/>
+	</powerList>
+	<colorList>
+		<layer><!-- Layer 1 - Leaves -->
+			<color r="100" g="180" b="0" a="0.7"/>
+			<color r="0" g="180" b="100" a="0.7"/>
+			<color r="80" g="150" b="80" a="0.7"/>
+		</layer>
+		<layer><!-- Layer 2 - Flower -->
+			<color r="255" g="130" b="240" a="0.7"/>
+			<color r="255" g="65" b="50" a="0.7"/>
+			<color r="255" g="150" b="130" a="0.7"/>
+			<color r="255" g="200" b="50" a="0.7"/>
+			<color r="255" g="240" b="140" a="0.7"/>
+			<color r="50" g="255" b="230" a="0.7"/>
+			<color r="150" g="255" b="240" a="0.7"/>
+			<color r="120" g="50" b="255" a="0.7"/>
+			<color r="180" g="100" b="255" a="0.7"/>
+		</layer>
+		<layer><!-- Layer 3 - That part -->
+			<color r="252" g="222" b="93" a="0"/>
+		</layer>
+	</colorList>
+</crewBlueprint>
+
+<augBlueprint name="ORCHID_RECYCLER">
+	<title id="aug_ORCHID_RECYCLER_title"/>
+	<desc id="aug_ORCHID_RECYCLER_desc"/>
+	<cost>80</cost>
+	<bp>8</bp>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<weaponBlueprint name="KERNEL_1">
+	<type>MISSILES</type>
+	<tip>tip_missiles</tip>
+	<title id="weapon_KERNEL_1_title"/>
+	<short id="weapon_KERNEL_1_short"/>
+	<desc id="weapon_KERNEL_1_desc"/>
+	<tooltip id="weapon_KERNEL_1_tooltip"/>
+	<damage>1</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<stun>5</stun>
+	<fireChance>0</fireChance>
+	<breachChance>10</breachChance>
+	<stunChance>0</stunChance>
+	<cooldown>10</cooldown>
+	<power>1</power>
+	<cost>40</cost>
+	<bp>6</bp>
+	<rarity>0</rarity>
+	<image>kernel_projectile</image>
+	<launchSounds>
+		<sound>kernel_launch1</sound>
+		<sound>kernel_launch2</sound>
+		<sound>kernel_launch3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>kernel_1</weaponArt>
+	<iconImage>missile</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="KERNEL_1_ENEMY">
+	<type>MISSILES</type>
+	<tip>tip_missiles</tip>
+	<title id="weapon_KERNEL_1_title"/>
+	<short id="weapon_KERNEL_1_short"/>
+	<desc id="weapon_KERNEL_1_desc"/>
+	<tooltip id="weapon_KERNEL_1_tooltip"/>
+	<damage>1</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<stun>5</stun>
+	<fireChance>0</fireChance>
+	<breachChance>10</breachChance>
+	<stunChance>0</stunChance>
+	<cooldown>12</cooldown>
+	<power>2</power>
+	<cost>40</cost>
+	<bp>6</bp>
+	<rarity>0</rarity>
+	<image>kernel_projectile</image>
+	<launchSounds>
+		<sound>kernel_launch1</sound>
+		<sound>kernel_launch2</sound>
+		<sound>kernel_launch3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>kernel_1</weaponArt>
+	<iconImage>missile</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="KERNEL_2">
+	<type>MISSILES</type>
+	<tip>tip_missiles</tip>
+	<title id="weapon_KERNEL_2_title"/>
+	<short id="weapon_KERNEL_2_short"/>
+	<desc id="weapon_KERNEL_2_desc"/>
+	<tooltip id="weapon_KERNEL_2_tooltip"/>
+	<damage>1</damage>
+	<missiles>1</missiles>
+	<shots>2</shots>
+	<sp>5</sp>
+	<stun>5</stun>
+	<fireChance>0</fireChance>
+	<breachChance>10</breachChance>
+	<stunChance>0</stunChance>
+	<cooldown>15</cooldown>
+	<power>2</power>
+	<cost>50</cost>
+	<bp>6</bp>
+	<rarity>0</rarity>
+	<image>kernel_projectile</image>
+	<launchSounds>
+		<sound>kernel_launch1</sound>
+		<sound>kernel_launch2</sound>
+		<sound>kernel_launch3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>kernel_2</weaponArt>
+	<iconImage>missile</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="KERNEL_2_ENEMY">
+	<type>MISSILES</type>
+	<tip>tip_missiles</tip>
+	<title id="weapon_KERNEL_2_title"/>
+	<short id="weapon_KERNEL_2_short"/>
+	<desc id="weapon_KERNEL_2_desc"/>
+	<tooltip id="weapon_KERNEL_2_tooltip"/>
+	<damage>1</damage>
+	<missiles>1</missiles>
+	<shots>2</shots>
+	<sp>5</sp>
+	<stun>5</stun>
+	<fireChance>0</fireChance>
+	<breachChance>10</breachChance>
+	<stunChance>0</stunChance>
+	<cooldown>17</cooldown>
+	<power>3</power>
+	<cost>50</cost>
+	<bp>6</bp>
+	<rarity>0</rarity>
+	<image>kernel_projectile</image>
+	<launchSounds>
+		<sound>kernel_launch1</sound>
+		<sound>kernel_launch2</sound>
+		<sound>kernel_launch3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>kernel_2</weaponArt>
+	<iconImage>missile</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="KERNEL_CHAIN">
+	<type>MISSILES</type>
+	<tip>tip_missiles</tip>
+	<title id="weapon_KERNEL_CHAIN_title"/>
+	<short id="weapon_KERNEL_CHAIN_short"/>
+	<desc id="weapon_KERNEL_CHAIN_desc"/>
+	<tooltip id="weapon_KERNEL_CHAIN_tooltip"/>
+	<damage>1</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<stun>5</stun>
+	<fireChance>0</fireChance>
+	<breachChance>10</breachChance>
+	<stunChance>0</stunChance>
+	<cooldown>12</cooldown>
+	<power>3</power>
+	<cost>60</cost>
+	<bp>6</bp>
+	<rarity>0</rarity>
+	<image>kernel_projectile</image>
+	<boost>
+		<type>cooldown</type>
+		<amount>3</amount>
+		<count>3</count>
+	</boost>
+	<launchSounds>
+		<sound>kernel_launch1</sound>
+		<sound>kernel_launch2</sound>
+		<sound>kernel_launch3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>kernel_chain</weaponArt>
+	<iconImage>missile</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="KERNEL_CHAIN_ENEMY">
+	<type>MISSILES</type>
+	<tip>tip_missiles</tip>
+	<title id="weapon_KERNEL_CHAIN_title"/>
+	<short id="weapon_KERNEL_CHAIN_short"/>
+	<desc id="weapon_KERNEL_CHAIN_desc"/>
+	<tooltip id="weapon_KERNEL_CHAIN_tooltip"/>
+	<damage>1</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<stun>5</stun>
+	<fireChance>0</fireChance>
+	<breachChance>10</breachChance>
+	<stunChance>0</stunChance>
+	<cooldown>13.5</cooldown>
+	<power>4</power>
+	<cost>60</cost>
+	<bp>6</bp>
+	<rarity>0</rarity>
+	<image>kernel_projectile</image>
+	<boost>
+		<type>cooldown</type>
+		<amount>3.5</amount>
+		<count>3</count>
+	</boost>
+	<launchSounds>
+		<sound>kernel_launch1</sound>
+		<sound>kernel_launch2</sound>
+		<sound>kernel_launch3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>kernel_chain</weaponArt>
+	<iconImage>missile</iconImage>
+</weaponBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_ORCHID" layout="orchid_cruiser" img="orchid_cruiser">
+	<class id="ship_PLAYER_SHIP_ORCHID_class"/>
+	<name id="ship_PLAYER_SHIP_ORCHID_name"/>
+	<desc id="ship_PLAYER_SHIP_ORCHID_desc"/>
+	<systemList>
+		<pilot power="1" room="0" start="true" img="room_pilot_2">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<doors power="2" room="6" start="true" img="room_doors_7">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<sensors power="1" room="7" start="true" img="room_sensors">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<medbay power="1" room="4" start="true" img="room_medbay_3">
+			<slot>
+				<number>3</number>
+			</slot>
+		</medbay>
+		<clonebay power="1" room="4" start="false">
+			<slot>
+				<number>3</number>
+			</slot>
+		</clonebay>
+		<shields power="2" room="3" start="true" img="room_shields_3">
+			<slot>
+				<direction>left</direction>
+				<number>2</number>
+			</slot>
+		</shields>
+		<engines power="1" room="13" start="true" img="room_engines_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<weapons power="2" room="10" start="true" img="room_weapons_5">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+		<drones power="3" room="9" start="true" img="room_drones_orchid"/>
+		<teleporter power="1" room="5" start="false"/>
+		<cloaking power="1" room="2" start="false" img="room_cloaking_5"/>
+		<oxygen power="1" room="1" start="true" img="room_oxygen_2"/>
+		<battery power="1" room="11" start="false" img="room_battery_orchid"/>
+		<mind power="1" room="8" start="true" img="room_mind_7"/>
+		<hacking power="1" room="12" start="false" img="room_hacking_orchid">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</hacking>
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList count="1" missiles="15">
+		<weapon name="KERNEL_2"/>
+	</weaponList>
+	<droneList count="2" drones="15">
+		<drone name="BOARDER"/>
+		<drone name="REPAIR"/>
+	</droneList>
+	<aug name="ORCHID_RECYCLER"/>
+	<health amount="30"/>
+	<maxPower amount="9"/>
+	<crewCount amount="3" class="orchid"/>
+	<shieldImage>stealth</shieldImage>
+	<cloakImage>orchid_cruiser</cloakImage>
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_ORCHID_2" layout="orchid_cruiser_autumn" img="orchid_cruiser_autumn">
+	<class id="ship_PLAYER_SHIP_ORCHID_class"/>
+	<name id="ship_PLAYER_SHIP_ORCHID_AUTUMN_name"/>
+	<desc id="ship_PLAYER_SHIP_ORCHID_AUTUMN_desc"/>
+	<systemList>
+		<pilot power="1" room="0" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<doors power="2" room="3" start="true" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<sensors power="1" room="8" start="true" img="room_sensors_orchid_2">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</sensors>
+		<medbay power="1" room="7" start="true" img="room_medbay_3">
+			<slot>
+				<number>3</number>
+			</slot>
+		</medbay>
+		<clonebay power="1" room="7" start="false">
+			<slot>
+				<number>3</number>
+			</slot>
+		</clonebay>
+		<shields power="2" room="6" start="true" img="room_shields_orchid_2">
+			<slot>
+				<direction>down</direction>
+				<number>3</number>
+			</slot>
+		</shields>
+		<engines power="1" room="14" start="true" img="room_engines_8">
+			<slot>
+				<direction>left</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<weapons power="1" room="1" start="true" img="room_weapons_9">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+		<oxygen power="1" room="9" start="true" img="room_oxygen_orchid_2"/>
+		<teleporter power="1" room="2" start="true"/>
+		<drones power="2" room="10" start="false" img="room_drones_orchid_2"/>
+		<cloaking power="1" room="11" start="false" img="room_cloaking_orchid_2"/>
+		<battery power="1" room="17" start="false" img="room_battery_orchid_2"/>
+		<mind power="1" room="12" start="false" img="room_mind_5"/>
+		<hacking power="1" room="13" start="false" img="room_hacking_8">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</hacking>
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="1" missiles="15">
+		<weapon name="KERNEL_1"/>
+	</weaponList>
+	<droneList count="0" drones="0"/>
+	<health amount="30"/>
+	<maxPower amount="6"/>
+	<aug name="ORCHID_RECYCLER"/>
+	<crewCount amount="1" class="human"/>
+	<crewCount amount="1" class="orchid"/>
+	<crewCount amount="1" class="rock"/>
+	<crewCount amount="1" class="mantis"/>
+	<shieldImage>stealth</shieldImage>
+	<cloakImage>orchid_cruiser</cloakImage>
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_ORCHID_3" layout="orchid_cruiser_strawberry" img="orchid_cruiser_strawberry">
+	<class id="ship_PLAYER_SHIP_ORCHID_class"/>
+	<name id="ship_PLAYER_SHIP_ORCHID_STRAWBERRY_name"/>
+	<desc id="ship_PLAYER_SHIP_ORCHID_STRAWBERRY_desc"/>
+	<systemList>
+		<pilot power="1" room="0" start="true" img="room_pilot_2">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<doors power="2" room="14" start="true" img="room_doors_orchid_3">
+			<slot>
+				<direction>down</direction>
+				<number>3</number>
+			</slot>
+		</doors>
+		<sensors power="1" room="10" start="false" img="room_sensors">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<medbay power="1" room="13" start="false" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<clonebay power="1" room="13" start="true">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<shields power="2" room="6" start="true" img="room_shields">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<engines power="1" room="17" start="true" img="room_engines_orchid_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<weapons power="3" room="7" start="true" img="room_weapons">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+		<drones power="2" room="9" start="false" img="room_drones_orchid_3"/>
+		<teleporter power="1" room="8" start="false"/>
+		<cloaking power="1" room="11" start="false" img="room_cloaking_orchid_3"/>
+		<oxygen power="1" room="3" start="true" img="room_oxygen_orchid_3"/>
+		<battery power="1" room="1" start="false" img="room_battery_13"/>
+		<mind power="1" room="2" start="false" img="room_mind_1"/>
+		<hacking power="1" room="12" start="false" img="room_hacking_4">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</hacking>
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="1" missiles="20">
+		<weapon name="KERNEL_CHAIN"/>
+	</weaponList>
+	<aug name="ORCHID_RECYCLER"/>
+	<droneList count="0" drones="0"/>
+	<health amount="30"/>
+	<maxPower amount="6"/>
+	<crewCount amount="1" class="anaerobic"/>
+	<crewCount amount="1" class="orchid"/>
+	<shieldImage>stealth</shieldImage>
+	<cloakImage>orchid_cruiser_strawberry</cloakImage>
+</shipBlueprint>
+
+</FTL>

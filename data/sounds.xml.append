@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FTL>
+
+<orchidDeath volume="6">aliens/bp_sfx_orchid_death.ogg</orchidDeath>
+<orchidShoot1 volume="4">aliens/bp_sfx_orchid_shoot1.ogg</orchidShoot1>
+<orchidShoot2 volume="4">aliens/bp_sfx_orchid_shoot2.ogg</orchidShoot2>
+<orchidShoot3 volume="4">aliens/bp_sfx_orchid_shoot3.ogg</orchidShoot3>
+
+<kernel_launch1 volume="2">weapons/bp_kernel_launch1.ogg</kernel_launch1>
+<kernel_launch2 volume="2">weapons/bp_kernel_launch2.ogg</kernel_launch2>
+<kernel_launch3 volume="2">weapons/bp_kernel_launch3.ogg</kernel_launch3>
+
+</FTL>

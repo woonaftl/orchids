@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FTL>
+
+<mod:findName type="event" name="MANTIS_CREW">
+	<mod-append:choice hidden="true" req="orchid">
+		<text id="event_MANTIS_CREW_ORCHID_choice"/>
+		<event>
+			<text id="event_MANTIS_CREW_ORCHID_text"/>
+			<crewMember amount="1" class="mantis"/>
+		</event>
+	</mod-append:choice>
+</mod:findName>
+
+</FTL>

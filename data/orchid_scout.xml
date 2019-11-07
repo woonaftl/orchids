@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FTL>
+
+<img x="-141" y="-86" w="387" h="437" />
+<offsets>
+	<floor x="18" y="-26" />
+	<cloak x="0" y="0" />
+</offsets>
+<weaponMounts>
+	<mount x="171" y="122" rotate="false" mirror="true" gib="4" slide="left" />
+	<mount x="216" y="121" rotate="false" mirror="false" gib="4" slide="right" />
+	<mount x="132" y="208" rotate="false" mirror="true" gib="3" slide="up" />
+	<mount x="258" y="208" rotate="false" mirror="false" gib="3" slide="up" />
+</weaponMounts>
+<explosion>
+	<gib1>
+		<velocity min="0.1" max="0.3" />
+		<direction min="20" max="80" />
+		<angular min="0" max="1" />
+		<x>5</x>
+		<y>164</y>
+	</gib1>
+	<gib2>
+		<velocity min="0.4" max="0.8" />
+		<direction min="200" max="260" />
+		<angular min="-1" max="-0.5" />
+		<x>126</x>
+		<y>238</y>
+	</gib2>
+	<gib3>
+		<velocity min="0.3" max="0.6" />
+		<direction min="270" max="330" />
+		<angular min="0" max="0.5" />
+		<x>107</x>
+		<y>98</y>
+	</gib3>
+	<gib4>
+		<velocity min="0.6" max="1" />
+		<direction min="-30" max="40" />
+		<angular min="-0.5" max="0" />
+		<x>146</x>
+		<y>5</y>
+	</gib4>
+</explosion>
+
+</FTL>

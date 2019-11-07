@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FTL>
+<findName name="WEAPONS_MISSILES_EVENTS" type="blueprintList">
+	<name>KERNEL_1</name>
+	<name>KERNEL_2</name>
+	<name>KERNEL_CHAIN</name>
+</findName>
+<blueprintList name="WEAPONS_ORCHID">
+	<name>LASER_BURST_1</name>
+	<name>LASER_BURST_2_A</name>
+	<name>LASER_BURST_3</name>
+	<name>LASER_BURST_5</name>
+	<name>LASER_HEAVY_1</name>
+	<name>LASER_HEAVY_2</name>
+	<name>LASER_CHARGEGUN</name>
+	<name>LASER_CHARGEGUN_2</name>
+	<name>LASER_CHAINGUN</name>
+	<name>BEAM_1</name>
+	<name>BEAM_2</name>
+	<name>BOMB_1</name>
+	<name>SHOTGUN</name>
+	<name>SHOTGUN_2</name>
+	<name>KERNEL_1_ENEMY</name>
+	<name>KERNEL_2_ENEMY</name>
+	<name>KERNEL_CHAIN_ENEMY</name>
+</blueprintList>
+<blueprintList name="SHIPS_ORCHID">
+	<name>ORCHID_BOMBER_1</name>
+	<name>ORCHID_BOMBER_2</name>
+	<name>ORCHID_FIGHTER_1</name>
+	<name>ORCHID_FIGHTER_2</name>
+	<name>ORCHID_GUARD_1</name>
+	<name>ORCHID_GUARD_2</name>
+	<name>ORCHID_SCOUT_1</name>
+	<name>ORCHID_SCOUT_2</name>
+</blueprintList>
+<shipBlueprint img="orchid_bomber" layout="orchid_bomber" name="ORCHID_BOMBER_1">
+	<class>Orchid Bomber</class>
+	<minSector>3</minSector>
+	<systemList>
+		<pilot max="3" power="1" room="0"/>
+		<engines max="5" power="2" room="10"/>
+		<weapons max="8" power="2" room="4"/>
+		<oxygen power="1" room="1"/>
+		<shields max="8" power="2" room="5"/>
+		<medbay max="3" power="1" room="9"/>
+		<doors max="3" power="1" room="6" start="false"/>
+		<drones max="6" power="2" room="7" start="false"/>
+	</systemList>
+	<droneList drones="5" load="DRONES_STANDARD"/>
+	<weaponList load="WEAPONS_ORCHID" missiles="10"/>
+	<health amount="10"/>
+	<maxPower amount="10"/>
+	<crewCount amount="4" class="orchid" max="7"/>
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>orchid_bomber</cloakImage>
+</shipBlueprint>
+<shipBlueprint img="orchid_bomber" layout="orchid_bomber" name="ORCHID_BOMBER_2">
+	<class>Orchid Assault</class>
+	<minSector>3</minSector>
+	<systemList>
+		<pilot max="3" power="1" room="0"/>
+		<engines max="5" power="2" room="10"/>
+		<weapons max="8" power="2" room="8"/>
+		<oxygen power="1" room="2"/>
+		<shields max="8" power="2" room="1"/>
+		<clonebay max="3" power="1" room="3"/>
+		<doors max="3" power="1" room="7" start="false"/>
+		<mind max="3" power="1" room="6" start="false"/>
+	</systemList>
+	<weaponList load="WEAPONS_ORCHID" missiles="10"/>
+	<health amount="10"/>
+	<maxPower amount="10"/>
+	<crewCount amount="4" class="orchid" max="7"/>
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>orchid_bomber</cloakImage>
+</shipBlueprint>
+<shipBlueprint img="orchid_fighter" layout="orchid_fighter" name="ORCHID_FIGHTER_1">
+	<class>Orchid Fighter</class>
+	<minSector>1</minSector>
+	<maxSector>5</maxSector>
+	<systemList>
+		<pilot max="2" power="1" room="0"/>
+		<engines max="5" power="2" room="8"/>
+		<weapons max="8" power="2" room="1"/>
+		<oxygen power="1" room="4"/>
+		<shields max="8" power="2" room="5"/>
+		<medbay max="2" power="1" room="2" start="false"/>
+		<doors max="2" power="1" room="3" start="false"/>
+	</systemList>
+	<weaponList load="WEAPONS_ORCHID" missiles="10"/>
+	<health amount="9"/>
+	<maxPower amount="10"/>
+	<crewCount amount="3" class="orchid" max="5"/>
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>orchid_fighter</cloakImage>
+</shipBlueprint>
+<shipBlueprint img="orchid_fighter" layout="orchid_fighter" name="ORCHID_FIGHTER_2">
+	<class>Orchid Defender</class>
+	<minSector>1</minSector>
+	<maxSector>5</maxSector>
+	<systemList>
+		<pilot max="2" power="1" room="0"/>
+		<engines max="5" power="2" room="8"/>
+		<weapons max="8" power="2" room="6"/>
+		<oxygen power="1" room="7"/>
+		<shields max="8" power="2" room="1"/>
+		<clonebay max="2" power="1" room="4" start="false"/>
+		<mind max="2" power="1" room="5" start="false"/>
+	</systemList>
+	<weaponList load="WEAPONS_ORCHID" missiles="10"/>
+	<health amount="9"/>
+	<maxPower amount="10"/>
+	<crewCount amount="3" class="orchid" max="5"/>
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>orchid_fighter</cloakImage>
+</shipBlueprint>
+<shipBlueprint img="orchid_guard" layout="orchid_guard" name="ORCHID_GUARD_1">
+	<class>Orchid Guard</class>
+	<minSector>3</minSector>
+	<systemList>
+		<pilot max="3" power="1" room="0"/>
+		<engines max="5" power="1" room="11"/>
+		<weapons max="8" power="2" room="8"/>
+		<oxygen power="1" room="9"/>
+		<shields max="8" power="2" room="1"/>
+		<medbay max="3" power="1" room="10"/>
+		<doors max="3" power="1" room="6" start="false"/>
+		<cloaking max="2" power="1" room="7" start="false"/>
+	</systemList>
+	<weaponList load="WEAPONS_ORCHID" missiles="10"/>
+	<health amount="11"/>
+	<maxPower amount="10"/>
+	<crewCount amount="4" class="orchid" max="7"/>
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>orchid_guard</cloakImage>
+</shipBlueprint>
+<shipBlueprint img="orchid_guard" layout="orchid_guard" name="ORCHID_GUARD_2">
+	<class>Orchid Protector</class>
+	<minSector>3</minSector>
+	<systemList>
+		<pilot max="3" power="1" room="0"/>
+		<engines max="5" power="1" room="11"/>
+		<weapons max="8" power="2" room="4"/>
+		<oxygen power="1" room="8"/>
+		<shields max="8" power="2" room="5"/>
+		<clonebay max="3" power="1" room="9"/>
+		<doors max="3" power="1" room="2" start="false"/>
+		<drones max="6" power="2" room="3" start="false"/>
+	</systemList>
+	<droneList drones="5" load="DRONES_STANDARD"/>
+	<weaponList load="WEAPONS_ORCHID" missiles="10"/>
+	<health amount="11"/>
+	<maxPower amount="10"/>
+	<crewCount amount="4" class="orchid" max="7"/>
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>orchid_guard</cloakImage>
+</shipBlueprint>
+<shipBlueprint img="orchid_scout" layout="orchid_scout" name="ORCHID_SCOUT_1">
+	<class>Orchid Scout</class>
+	<maxSector>3</maxSector>
+	<systemList>
+		<pilot max="2" power="1" room="0"/>
+		<engines max="5" power="2" room="4"/>
+		<weapons max="6" power="2" room="6"/>
+		<oxygen power="1" room="5"/>
+		<shields max="6" power="2" room="2"/>
+		<medbay max="2" power="1" room="3" start="false"/>
+	</systemList>
+	<weaponList load="WEAPONS_ORCHID" missiles="10"/>
+	<health amount="8"/>
+	<maxPower amount="9"/>
+	<crewCount amount="2" class="orchid" max="3"/>
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>orchid_scout</cloakImage>
+</shipBlueprint>
+<shipBlueprint img="orchid_scout" layout="orchid_scout" name="ORCHID_SCOUT_2">
+	<class>Orchid Interceptor</class>
+	<maxSector>3</maxSector>
+	<systemList>
+		<pilot max="2" power="1" room="0"/>
+		<engines max="5" power="2" room="6"/>
+		<weapons max="6" power="2" room="5"/>
+		<oxygen power="1" room="2"/>
+		<shields max="6" power="2" room="3"/>
+		<mind max="2" power="1" room="1" start="false"/>
+	</systemList>
+	<weaponList load="WEAPONS_ORCHID" missiles="10"/>
+	<health amount="8"/>
+	<maxPower amount="9"/>
+	<crewCount amount="2" class="orchid" max="3"/>
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>orchid_scout</cloakImage>
+</shipBlueprint>
+</FTL>

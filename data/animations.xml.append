@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FTL>
+
+<animSheet name="orchid" w="350" h="490" fw="35" fh="35">people/orchid_base.png</animSheet>
+
+<anim name="orchid_portrait">
+	<sheet>orchid</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="orchid_crewLaser">
+	<sheet>orchid</sheet>
+	<desc length="1" x="1" y="0"/>
+	<time>0.5</time>
+</anim>
+
+<anim name="orchid_clone">
+	<sheet>orchid</sheet>
+	<desc length="7" x="2" y="0"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="orchid_death_right">
+	<sheet>orchid</sheet>
+	<desc length="9" x="0" y="1"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="orchid_teleport">
+	<sheet>orchid</sheet>
+	<desc length="9" x="0" y="2"/>
+	<time>0.5</time>
+</anim>
+
+<anim name="orchid_type_up">
+	<sheet>orchid</sheet>
+	<desc length="4" x="0" y="3"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="orchid_type_down">
+	<sheet>orchid</sheet>
+	<desc length="4" x="4" y="3"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="orchid_type_right">
+	<sheet>orchid</sheet>
+	<desc length="4" x="0" y="4"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="orchid_type_left">
+	<sheet>orchid</sheet>
+	<desc length="4" x="4" y="4"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="orchid_repair">
+	<sheet>orchid</sheet>
+	<desc length="9" x="0" y="5"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="orchid_fire_up">
+	<sheet>orchid</sheet>
+	<desc length="4" x="0" y="6"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="orchid_fire_left">
+	<sheet>orchid</sheet>
+	<desc length="4" x="4" y="6"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="orchid_fire_down">
+	<sheet>orchid</sheet>
+	<desc length="4" x="0" y="7"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="orchid_fire_right">
+	<sheet>orchid</sheet>
+	<desc length="4" x="4" y="7"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="orchid_punch_up">
+	<sheet>orchid</sheet>
+	<desc length="10" x="0" y="8"/>
+	<time>1.5</time>
+</anim>
+
+<anim name="orchid_punch_down">
+	<sheet>orchid</sheet>
+	<desc length="10" x="0" y="9"/>
+	<time>1.5</time>
+</anim>
+
+<anim name="orchid_shoot_up">
+	<sheet>orchid</sheet>
+	<desc length="3" x="0" y="10"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="orchid_shoot_left">
+	<sheet>orchid</sheet>
+	<desc length="3" x="3" y="10"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="orchid_shoot_down">
+	<sheet>orchid</sheet>
+	<desc length="3" x="0" y="11"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="orchid_shoot_right">
+	<sheet>orchid</sheet>
+	<desc length="3" x="3" y="11"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="orchid_walk_up">
+	<sheet>orchid</sheet>
+	<desc length="4" x="0" y="12"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="orchid_walk_left">
+	<sheet>orchid</sheet>
+	<desc length="4" x="4" y="12"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="orchid_walk_down">
+	<sheet>orchid</sheet>
+	<desc length="4" x="0" y="13"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="orchid_walk_right">
+	<sheet>orchid</sheet>
+	<desc length="4" x="4" y="13"/>
+	<time>1.0</time>
+</anim>
+
+<!-- KERNEL WEAPONS -->
+
+<animSheet name="kernel_projectile" w="32" h="80" fw="32" fh="80">weapons/kernel_projectile.png</animSheet>
+<anim name="kernel_projectile">
+	<sheet>kernel_projectile</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<animSheet name="kernel_1" w="299" h="45" fw="23" fh="45">weapons/kernel_1_strip13.png</animSheet>
+<weaponAnim name="kernel_1">
+	<sheet>kernel_1</sheet>
+	<desc length="13" x="0" y="0"/>
+	<chargedFrame>8</chargedFrame>
+	<fireFrame>11</fireFrame>
+	<firePoint x="13" y="16"/>
+	<mountPoint x="4" y="35"/>
+</weaponAnim>
+
+<animSheet name="kernel_2" w="416" h="53" fw="32" fh="53">weapons/kernel_2_strip13.png</animSheet>
+<weaponAnim name="kernel_2">
+	<sheet>kernel_2</sheet>
+	<desc length="13" x="0" y="0"/>
+	<chargedFrame>8</chargedFrame>
+	<fireFrame>11</fireFrame>
+	<firePoint x="20" y="16"/>
+	<mountPoint x="8" y="40"/>
+</weaponAnim>
+
+<animSheet name="kernel_chain_charge" w="120" h="61" fw="40" fh="61">weapons/kernel_chain_chargeglow_strip3.png</animSheet>
+<anim name="kernel_chain_charge">
+	<sheet>kernel_chain_charge</sheet>
+	<desc length="3" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+<animSheet name="kernel_chain" w="520" h="61" fw="40" fh="61">weapons/kernel_chain_strip13.png</animSheet>
+<weaponAnim name="kernel_chain">
+	<sheet>kernel_chain</sheet>
+	<desc length="13" x="0" y="0"/>
+	<chargedFrame>8</chargedFrame>
+	<fireFrame>11</fireFrame>
+	<firePoint x="21" y="16"/>
+	<mountPoint x="8" y="47"/>
+	<boost>kernel_chain_charge</boost>
+</weaponAnim>
+
+</FTL>

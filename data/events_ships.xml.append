@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FTL>
+
+<ship name="ORCHID_SHIP" auto_blueprint="SHIPS_ORCHID">
+	<surrender chance="0.3" min="3" max="5" load="ORCHID_SURRENDER"/>
+	<escape chance="0.5" min="4" max="6" load="PIRATE_ESCAPE"/>
+	<destroyed load="DESTROYED_DEFAULT"/>
+	<deadCrew load="DEAD_CREW_DEFAULT"/>
+</ship>
+
+</FTL>

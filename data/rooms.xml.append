@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FTL>
+
+<roomLayout name="engines_orchid_3">
+	<computerGlow x="53" y="7" dir="RIGHT"/>
+</roomLayout>
+
+<roomLayout name="hacking_orchid">
+	<computerGlow x="9" y="54" dir="DOWN"/>
+</roomLayout>
+
+<roomLayout name="shields_orchid_2">
+	<computerGlow x="36" y="53" dir="DOWN"/>
+</roomLayout>
+
+</FTL>

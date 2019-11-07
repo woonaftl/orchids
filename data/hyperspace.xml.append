@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FTL>
+
+<mod:findLike type="ships">
+	<mod-append:ship name="PLAYER_SHIP_ORCHID" b="true" c="true"/>
+</mod:findLike>
+
+<mod:findLike type="crew">
+	<mod-append:race name="orchid">
+		<fireRepairMultiplier>0.6</fireRepairMultiplier>
+		<fireDamageMultiplier>4.0</fireDamageMultiplier>
+		<oxygenChangeSpeed>0.525</oxygenChangeSpeed>
+		<deathSounds>
+			<deathSound>orchidDeath</deathSound>
+		</deathSounds>
+		<shootingSounds>
+			<shootingSound>orchidShoot1</shootingSound>
+			<shootingSound>orchidShoot2</shootingSound>
+			<shootingSound>orchidShoot3</shootingSound>
+		</shootingSounds>
+	</mod-append:race>
+</mod:findLike>
+
+<mod:findLike type="augments">
+    <mod-append:aug name="ORCHID_RECYCLER">
+		<function name="EXPLOSIVE_REPLICATOR" value="0.75"/>
+    </mod-append:aug>
+</mod:findLike>
+
+</FTL>

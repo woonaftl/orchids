@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<mod:findName type="blueprintList" name="WEAPONS_MISSILES">
+	<mod-append:name>KERNEL_1</mod-append:name>
+	<mod-append:name>KERNEL_2</mod-append:name>
+	<mod-append:name>KERNEL_CHAIN</mod-append:name>
+</mod:findName>

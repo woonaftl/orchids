@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FTL>
+<findName name="MANTIS_CREW" type="event">
+	<choice hidden="true" req="orchid">
+		<text>(Орхид) Заполнить отсек успокаивающим ароматом перед тем, как вскрыть капсулу.</text>
+		<event>
+			<text>Находившийся внутри богомол отдыхал. После пробуждения, он рад вдохнуть свежего воздуха и свободно двигать конечностями. Богомол предлагает присоединиться к вашему экипажу до тех пор, пока не найдет дорогу домой.</text>
+			<crewMember amount="1" class="mantis"/>
+		</event>
+	</choice>
+</findName>
+</FTL>

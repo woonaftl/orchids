@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FTL>
+<findName name="ROCK_QUEST_MARRIAGE" type="event">
+	<findLike limit="1" reverse="false" start="0" type="choice">
+		<findLike type="event">
+			<choice hidden="true" req="orchid">
+				<text>(Orchid) Hand her over together with a wedding gift.</text>
+				<event>
+					<text>The Grand Basilisk's Chief is very grateful for delivering his bride, and contacts you personally: "I hereby proclaim you, captain of unknown alien ship, an honorable citizen of Numa V. Allow me to present this humble gift.".</text>
+					<autoReward level="HIGH">scrap_only</autoReward>
+					<weapon name="BEAM_FIRE"/>
+					<crewMember amount="-1" class="orchid"/>
+				</event>
+			</choice>
+		</findLike>
+	</findLike>
+</findName>
+</FTL>

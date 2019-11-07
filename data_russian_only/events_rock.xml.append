@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FTL>
+<findName name="ROCK_QUEST_MARRIAGE" type="event">
+	<findLike limit="1" reverse="false" start="0" type="choice">
+		<findLike type="event">
+			<choice hidden="true" req="orchid">
+				<text>(Орхид) Передать ее вместе с небольшим свадебным подарком.</text>
+				<event>
+					<text>Великий Василиск очень признателен вам за помощь в организации свадьбы и лично благодарит: «Настоящим я объявляю вас, капитан неизвестного корабля пришельцев, почетным гражданином Нумы-5. Позвольте мне представить этот скромный подарок».</text>
+					<autoReward level="HIGH">scrap_only</autoReward>
+					<weapon name="BEAM_FIRE"/>
+					<crewMember amount="-1" class="orchid"/>
+				</event>
+			</choice>
+		</findLike>
+	</findLike>
+</findName>
+</FTL>
