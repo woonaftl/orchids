@@ -5,7 +5,7 @@
 <text name="crew_orchid_title" language="ru">Орхид</text>
 <text name="crew_orchid_short" language="ru">Орхид</text>
 <text name="crew_orchid_desc" language="ru">Эти растительные формы жизни имеют мало общего с земными, но насыщают воздух кислородом столь же хорошо.</text>
-<text name="crew_orchid_power_1" language="ru">Наполняет отсеки кислородом</text>
+<text name="crew_orchid_power_1" language="ru">Наполняет отсеки кислородом (на корабле с орхидом должна быть система кислорода)</text>
 <text name="crew_orchid_power_2" language="ru">Получает в 4 раза больше урона от пожаров</text>
 <text name="crew_orchid_power_3" language="ru">Тушит пожары в 2 раза медленнее</text>
 

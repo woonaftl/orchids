@@ -5,7 +5,7 @@
 <text name="crew_orchid_title">Orchid</text>
 <text name="crew_orchid_short">Orchid</text>
 <text name="crew_orchid_desc">These floral lifeforms have little in common with Earth plants but fill air with oxygen just as well.</text>
-<text name="crew_orchid_power_1">Provide oxygen to rooms they are in</text>
+<text name="crew_orchid_power_1">Provide oxygen to rooms they are in (as long as the ship they're on has O2 system)</text>
 <text name="crew_orchid_power_2">Take 4x damage from fire</text>
 <text name="crew_orchid_power_3">Put out fires at half speed</text>
 

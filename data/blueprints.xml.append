@@ -2,12 +2,6 @@
 
 <FTL>
 
-<mod:findName type="systemBlueprint" name="oxygen">
-	<mod:findLike type="cost">
-		<mod:setValue>60</mod:setValue>
-	</mod:findLike>
-</mod:findName>
-
 <crewBlueprint name="orchid">
 	<title id="crew_orchid_title"/>
 	<short id="crew_orchid_short"/>
@@ -42,15 +36,6 @@
 		</layer>
 	</colorList>
 </crewBlueprint>
-
-<augBlueprint name="ORCHID_RECYCLER">
-	<title id="aug_ORCHID_RECYCLER_title"/>
-	<desc id="aug_ORCHID_RECYCLER_desc"/>
-	<cost>80</cost>
-	<bp>8</bp>
-	<rarity>0</rarity>
-	<stackable>false</stackable>
-</augBlueprint>
 
 <weaponBlueprint name="KERNEL_1">
 	<type>MISSILES</type>
@@ -441,12 +426,12 @@
 			</slot>
 		</weapons>
 		<oxygen power="1" room="9" start="true" img="room_oxygen_orchid_2"/>
-		<teleporter power="1" room="2" start="true"/>
+		<teleporter power="1" room="13" start="false"/>
 		<drones power="2" room="10" start="false" img="room_drones_orchid_2"/>
 		<cloaking power="1" room="11" start="false" img="room_cloaking_orchid_2"/>
 		<battery power="1" room="17" start="false" img="room_battery_orchid_2"/>
 		<mind power="1" room="12" start="false" img="room_mind_5"/>
-		<hacking power="1" room="13" start="false" img="room_hacking_8">
+		<hacking power="1" room="2" start="true" img="room_hacking_2">
 			<slot>
 				<direction>down</direction>
 				<number>1</number>
@@ -458,14 +443,12 @@
 	<weaponList count="1" missiles="15">
 		<weapon name="KERNEL_1"/>
 	</weaponList>
-	<droneList count="0" drones="0"/>
+	<droneList count="0" drones="10"/>
 	<health amount="30"/>
-	<maxPower amount="6"/>
+	<maxPower amount="5"/>
 	<aug name="ORCHID_RECYCLER"/>
-	<crewCount amount="1" class="human"/>
-	<crewCount amount="1" class="orchid"/>
 	<crewCount amount="1" class="rock"/>
-	<crewCount amount="1" class="mantis"/>
+	<crewCount amount="1" class="orchid"/>
 	<shieldImage>stealth</shieldImage>
 	<cloakImage>orchid_cruiser</cloakImage>
 </shipBlueprint>

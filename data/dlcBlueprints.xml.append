@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FTL>
+
+<augBlueprint name="ORCHID_RECYCLER">
+	<title id="aug_ORCHID_RECYCLER_title"/>
+	<desc id="aug_ORCHID_RECYCLER_desc"/>
+	<cost>80</cost>
+	<bp>8</bp>
+	<rarity>0</rarity>
+	<!--<stackable>false</stackable>-->
+</augBlueprint>
+
+</FTL>
