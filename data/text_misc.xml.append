@@ -37,6 +37,8 @@
 
 <text name="ship_ORCHID_BOMBER_1_class">Orchid Bomber</text>
 <text name="ship_ORCHID_BOMBER_2_class">Orchid Assault</text>
+<text name="ship_ORCHID_DESTROYER_1_class">Orchid Destroyer</text>
+<text name="ship_ORCHID_DESTROYER_2_class">Orchid Instigator</text>
 <text name="ship_ORCHID_FIGHTER_1_class">Orchid Fighter</text>
 <text name="ship_ORCHID_FIGHTER_2_class">Orchid Defender</text>
 <text name="ship_ORCHID_GUARD_1_class">Orchid Guard</text>

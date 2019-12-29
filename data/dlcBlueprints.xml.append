@@ -8,7 +8,7 @@
 	<cost>80</cost>
 	<bp>8</bp>
 	<rarity>0</rarity>
-	<!--<stackable>false</stackable>-->
+	<stackable>false</stackable>
 </augBlueprint>
 
 </FTL>

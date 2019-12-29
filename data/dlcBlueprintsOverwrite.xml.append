@@ -30,6 +30,8 @@
 <blueprintList name="SHIPS_ORCHID">
 	<name>ORCHID_BOMBER_1</name>
 	<name>ORCHID_BOMBER_2</name>
+	<name>ORCHID_DESTROYER_1</name>
+	<name>ORCHID_DESTROYER_2</name>
 	<name>ORCHID_FIGHTER_1</name>
 	<name>ORCHID_FIGHTER_2</name>
 	<name>ORCHID_GUARD_1</name>
@@ -79,6 +81,49 @@
 	<crewCount amount = "4" max="7" class="orchid"/>
 	<boardingAI>sabotage</boardingAI>
 	<cloakImage>orchid_bomber</cloakImage>
+</shipBlueprint>
+
+<shipBlueprint name="ORCHID_DESTROYER_1" layout="orchid_destroyer" img="orchid_destroyer">
+	<class id="ship_ORCHID_DESTROYER_1_class"/>
+	<minSector>2</minSector>
+	<systemList>
+		<pilot power="1" max="3" room="0"/>
+		<engines power="1" max="4" room="9"/>
+		<weapons power="2" max="8" room="4"/>
+		<oxygen power="1" room="5"/>
+		<shields power="2" max="8" room="3"/>
+		<medbay power="1" max="3" room="6" start="false"/>
+		<doors power="1" max="3" room="2"/>
+		<hacking power="1" max="3" room="7" start="false"/>
+	</systemList>
+	<droneList drones="4"/>
+	<weaponList missiles="10" load="WEAPONS_ORCHID"/>
+	<health amount="10"/>
+	<maxPower amount="10"/>
+	<crewCount amount="3" max="6" class="orchid"/>
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>orchid_destroyer</cloakImage>
+</shipBlueprint>
+
+<shipBlueprint name="ORCHID_DESTROYER_2" layout="orchid_destroyer" img="orchid_destroyer">
+	<class id="ship_ORCHID_DESTROYER_2_class"/>
+	<minSector>2</minSector>
+	<systemList>
+		<pilot power="1" max="3" room="0"/>
+		<engines power="1" max="4" room="9"/>
+		<weapons power="2" max="8" room="8"/>
+		<oxygen power="1" room="2"/>
+		<shields power="2" max="8" room="1"/>
+		<clonebay power="1" max="3" room="4" start="false"/>
+		<doors power="1" max="3" room="3"/>
+		<mind power="1" max="3" room="5" start="false"/>
+	</systemList>
+	<weaponList missiles="10" load="WEAPONS_ORCHID"/>
+	<health amount="10"/>
+	<maxPower amount="10"/>
+	<crewCount amount="3" max="6" class="orchid"/>
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>orchid_destroyer</cloakImage>
 </shipBlueprint>
 
 <shipBlueprint name="ORCHID_FIGHTER_1" layout="orchid_fighter" img="orchid_fighter">

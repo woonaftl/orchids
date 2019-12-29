@@ -6,7 +6,7 @@
 <version>1.0</version>
 <description><![CDATA[REQUIRES HYPERSPACE 0.2+!
 
-Mod contains a playable race, a playable ship (3 types) with custom equipment, a themed sector type with new events and new enemy ships. Everything in the mod is added to the game without replacing anything.
+Mod contains a playable race, a playable ship (3 types) with custom equipment, a themed sector type with new events and new enemy ships (5 hulls). Everything in the mod is added to the game without replacing anything.
 
 
 Orchids are floral lifeforms who evolved to be able to move, fight in close combat, and travel through space in ships made of giant seeds. Their name was given by humans for resembling Earth plants, but they have little in common.
@@ -25,12 +25,14 @@ THANKS FOR PLAYING
 Credits:
 TheSwiftTiger & Winderps - Hyperspace and making possible to add new races, abilities and playable ships
 
+Laythe - Orchid Destroyer enemy sprite
+
 Snorlaxxo & kix - Type B and C recolors
 
 kix - Type B and C miniships
 
 bamalf - help with events
 
-Markus, AgentTheKat, Laythe, and others - feedback, ideas, and help in general]]>
+Markus, AgentTheKat, KBa3u, and others - feedback, ideas, and help in general]]>
 </description>
 </metadata>
