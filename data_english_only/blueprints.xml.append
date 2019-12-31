@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FTL>
-<findName name="oxygen" type="systemBlueprint">
-	<findLike type="cost">
-		<setValue>60</setValue>
-	</findLike>
-</findName>
 <crewBlueprint name="orchid">
 	<title>Orchid</title>
 	<short>Orchid</short>
@@ -13,7 +8,7 @@
 	<bp>2</bp>
 	<rarity>0</rarity>
 	<powerList>
-		<power>Provide oxygen to rooms they are in</power>
+		<power>Provide oxygen to rooms they are in (as long as the ship they're on has O2 system)</power>
 		<power>Take 4x damage from fire</power>
 		<power>Put out fires at half speed</power>
 	</powerList>
@@ -42,14 +37,6 @@
 		</layer>
 	</colorList>
 </crewBlueprint>
-<augBlueprint name="ORCHID_RECYCLER">
-	<title>Orchid Recycler</title>
-	<desc>Missile based weapons have a 75 percent chance of not using a missile.</desc>
-	<cost>80</cost>
-	<bp>8</bp>
-	<rarity>0</rarity>
-	<stackable>false</stackable>
-</augBlueprint>
 <weaponBlueprint name="KERNEL_1">
 	<type>MISSILES</type>
 	<tip>tip_missiles</tip>
@@ -300,6 +287,90 @@
 	<weaponArt>kernel_chain</weaponArt>
 	<iconImage>missile</iconImage>
 </weaponBlueprint>
+<weaponBlueprint NOLOC="1" name="ORCHID_DRONE_LASER">
+	<type>LASER</type>
+	<title>Drone Laser</title>
+	<damage>1</damage>
+	<shots>1</shots>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<rarity>0</rarity>
+	<image>laser_light1</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_burst_1</weaponArt>
+</weaponBlueprint>
+<weaponBlueprint NOLOC="1" name="ORCHID_DRONE_BEAM">
+	<type>BEAM</type>
+	<tip>tip_beams</tip>
+	<title>Drone Beam</title>
+	<short>Drone Beam</short>
+	<desc>'Baby's first beam'; Extremely cheap and weak beam weapon.</desc>
+	<damage>1</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<speed>3</speed>
+	<rarity>0</rarity>
+	<image>beam_contact</image>
+	<length>15</length>
+	<launchSounds>
+		<sound>beam1</sound>
+		<sound>beam1_2</sound>
+	</launchSounds>
+	<weaponArt>beam_1</weaponArt>
+</weaponBlueprint>
+<droneBlueprint name="ORCHID_COMBAT">
+	<type>COMBAT</type>
+	<tip>tip_combat</tip>
+	<title>Mini-Combat Drone</title>
+	<short>Mini-Combat</short>
+	<desc>Combat drone, reduced in size to improve power effeciency.</desc>
+	<power>1</power>
+	<cooldown>1000</cooldown>
+	<!-- Doesn't affect combat drone -->
+	<dodge>0</dodge>
+	<speed>10</speed>
+	<cost>30</cost>
+	<bp>3</bp>
+	<droneImage>orchid_drone_combat</droneImage>
+	<weaponBlueprint>ORCHID_DRONE_LASER</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+<droneBlueprint name="ORCHID_COMBAT_BEAM">
+	<type>COMBAT</type>
+	<tip>tip_combat</tip>
+	<title>Mini-Beam Drone</title>
+	<short>Mini-Beam</short>
+	<desc>Anti-ship beam drone, reduced in size to improve power effeciency.</desc>
+	<power>1</power>
+	<cooldown>1000</cooldown>
+	<!-- Doesn't affect combat drone -->
+	<dodge>0</dodge>
+	<speed>10</speed>
+	<cost>30</cost>
+	<bp>3</bp>
+	<droneImage>orchid_drone_beam</droneImage>
+	<weaponBlueprint>ORCHID_DRONE_BEAM</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>beam</iconImage>
+</droneBlueprint>
 <shipBlueprint img="orchid_cruiser" layout="orchid_cruiser" name="PLAYER_SHIP_ORCHID">
 	<class>Orchid Cruiser</class>
 	<name>Juglan</name>
@@ -383,7 +454,7 @@
 <shipBlueprint img="orchid_cruiser_autumn" layout="orchid_cruiser_autumn" name="PLAYER_SHIP_ORCHID_2">
 	<class>Orchid Cruiser</class>
 	<name>Autumn</name>
-	<desc>Even though they are not the fiercest or most resilient, Orchid abilities make them a welcome addition to boarding teams.</desc>
+	<desc>Orchid recycling technology allows to deploy giant swarms of combat drones to destroy enemy ships.</desc>
 	<systemList>
 		<pilot img="room_pilot" power="1" room="0" start="true">
 			<slot>
@@ -403,7 +474,7 @@
 				<number>0</number>
 			</slot>
 		</sensors>
-		<medbay img="room_medbay_2" power="1" room="7" start="true">
+		<medbay img="room_medbay_3" power="1" room="7" start="true">
 			<slot>
 				<number>3</number>
 			</slot>
@@ -413,10 +484,10 @@
 				<number>3</number>
 			</slot>
 		</clonebay>
-		<shields img="room_shields_orchid_2" power="2" room="6" start="true">
+		<shields img="room_shields_orchid_2" power="2" room="2" start="true">
 			<slot>
 				<direction>down</direction>
-				<number>3</number>
+				<number>1</number>
 			</slot>
 		</shields>
 		<engines img="room_engines_8" power="1" room="14" start="true">
@@ -431,32 +502,34 @@
 				<number>1</number>
 			</slot>
 		</weapons>
-		<oxygen img="room_oxygen_orchid_3" power="1" room="9" start="true"/>
-		<teleporter power="1" room="2" start="true"/>
-		<drones img="room_drones_orchid_3" power="2" room="10" start="false"/>
-		<cloaking img="room_cloaking_orchid_3" power="1" room="11" start="false"/>
-		<battery img="room_battery_orchid_3" power="1" room="17" start="false"/>
+		<oxygen img="room_oxygen_orchid_2" power="1" room="9" start="true"/>
+		<teleporter power="1" room="13" start="false"/>
+		<drones img="room_drones_orchid_2" power="3" room="6" start="true"/>
+		<cloaking img="room_cloaking_orchid_2" power="1" room="11" start="false"/>
+		<battery img="room_battery_orchid_2" power="1" room="17" start="false"/>
 		<mind img="room_mind_5" power="1" room="12" start="false"/>
-		<hacking img="room_hacking_8" power="1" room="13" start="false">
+		<hacking img="room_hacking_6" power="1" room="10" start="false">
 			<slot>
-				<direction>down</direction>
-				<number>1</number>
+				<direction>up</direction>
+				<number>0</number>
 			</slot>
 		</hacking>
 	</systemList>
 	<weaponSlots>3</weaponSlots>
-	<droneSlots>2</droneSlots>
+	<droneSlots>3</droneSlots>
 	<weaponList count="1" missiles="15">
 		<weapon name="KERNEL_1"/>
 	</weaponList>
-	<droneList count="0" drones="0"/>
+	<droneList count="3" drones="15">
+		<drone name="ORCHID_COMBAT"/>
+		<drone name="ORCHID_COMBAT"/>
+		<drone name="ORCHID_COMBAT_BEAM"/>
+	</droneList>
 	<health amount="30"/>
-	<maxPower amount="6"/>
+	<maxPower amount="7"/>
 	<aug name="ORCHID_RECYCLER"/>
-	<crewCount amount="1" class="human"/>
-	<crewCount amount="1" class="orchid"/>
 	<crewCount amount="1" class="rock"/>
-	<crewCount amount="1" class="mantis"/>
+	<crewCount amount="1" class="orchid"/>
 	<shieldImage>stealth</shieldImage>
 	<cloakImage>orchid_cruiser</cloakImage>
 </shipBlueprint>

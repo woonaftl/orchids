@@ -27,6 +27,8 @@
 <blueprintList name="SHIPS_ORCHID">
 	<name>ORCHID_BOMBER_1</name>
 	<name>ORCHID_BOMBER_2</name>
+	<name>ORCHID_DESTROYER_1</name>
+	<name>ORCHID_DESTROYER_2</name>
 	<name>ORCHID_FIGHTER_1</name>
 	<name>ORCHID_FIGHTER_2</name>
 	<name>ORCHID_GUARD_1</name>
@@ -74,6 +76,47 @@
 	<crewCount amount="4" class="orchid" max="7"/>
 	<boardingAI>sabotage</boardingAI>
 	<cloakImage>orchid_bomber</cloakImage>
+</shipBlueprint>
+<shipBlueprint img="orchid_destroyer" layout="orchid_destroyer" name="ORCHID_DESTROYER_1">
+	<class>Взломщик орхидов</class>
+	<minSector>2</minSector>
+	<systemList>
+		<pilot max="3" power="1" room="0"/>
+		<engines max="4" power="1" room="9"/>
+		<weapons max="8" power="2" room="4"/>
+		<oxygen power="1" room="5"/>
+		<shields max="8" power="2" room="3"/>
+		<medbay max="3" power="1" room="6" start="false"/>
+		<doors max="3" power="1" room="2"/>
+		<hacking max="3" power="1" room="7" start="false"/>
+	</systemList>
+	<droneList drones="4"/>
+	<weaponList load="WEAPONS_ORCHID" missiles="10"/>
+	<health amount="10"/>
+	<maxPower amount="10"/>
+	<crewCount amount="3" class="orchid" max="6"/>
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>orchid_destroyer</cloakImage>
+</shipBlueprint>
+<shipBlueprint img="orchid_destroyer" layout="orchid_destroyer" name="ORCHID_DESTROYER_2">
+	<class>Захватчик орхидов</class>
+	<minSector>2</minSector>
+	<systemList>
+		<pilot max="3" power="1" room="0"/>
+		<engines max="4" power="1" room="9"/>
+		<weapons max="8" power="2" room="8"/>
+		<oxygen power="1" room="2"/>
+		<shields max="8" power="2" room="1"/>
+		<clonebay max="3" power="1" room="4" start="false"/>
+		<doors max="3" power="1" room="3"/>
+		<mind max="3" power="1" room="5" start="false"/>
+	</systemList>
+	<weaponList load="WEAPONS_ORCHID" missiles="10"/>
+	<health amount="10"/>
+	<maxPower amount="10"/>
+	<crewCount amount="3" class="orchid" max="6"/>
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>orchid_destroyer</cloakImage>
 </shipBlueprint>
 <shipBlueprint img="orchid_fighter" layout="orchid_fighter" name="ORCHID_FIGHTER_1">
 	<class>Истребитель орхидов</class>

@@ -6,7 +6,7 @@
 		<setAttributes blue="false" lvl="0" max_group="0" req="orchid"/>
 	</findWithChildLike>
 	<choice blue="false" hidden="true" lvl="1" max_group="0" req="orchid">
-		<text>Отправить спасательный отряд на помощь обитателям станции.</text>
+		<text>TEXT_NOT_FOUND</text>
 		<event load="DISTRESS_STATION_FIRE_CREW_ORCHID"/>
 	</choice>
 </findName>
@@ -14,7 +14,7 @@
 	<text>Вы отправляете спасательный отряд на станцию. Один из орхидов отделился от основной группы и воспламенился. Вы швартуетесь, пытаясь эвакуировать пострадавшего, но он уже получил ожоги, несовместимые с жизнью. После произошедшего, отправлять орхидов тушить огонь не кажется настолько блестящей идеей.</text>
 	<removeCrew class="orchid">
 		<clone>true</clone>
-		<text>Через минуту из отсека репликации выходит клон погибшего, на своем опыте убедившись, что с огнем шутки плохи.</text>
+		<text>TEXT_NOT_FOUND</text>
 	</removeCrew>
 	<autoReward level="LOW">scrap_only</autoReward>
 </event>
@@ -28,27 +28,27 @@
 </findName>
 <eventList name="MADMAN_ORCHID">
 	<event>
-		<text>Оказавшись на борту корабля, человек расправляет плечи и успокаивается. Ему понадобится время, чтобы прийти в себя, но он рад присоединиться к вашей команде.</text>
-		<crewMember amount="1" class="human">Чарли</crewMember>
+		<text>TEXT_NOT_FOUND</text>
+		<crewMember amount="1" class="human">TEXT_NOT_FOUND</crewMember>
 	</event>
 	<event>
-		<text>Похоже, спасенный пострадал гораздо сильнее, чем вам казалось. По пути на корабль он теряет сознание. Кажется, он уже не выживет.</text>
+		<text>TEXT_NOT_FOUND</text>
 		<choice>
 			<text id="continue"/>
 			<event/>
 		</choice>
 		<choice hidden="true" lvl="2" req="medbay">
-			<text>(Улучшенный медотсек) Быстро доставить спасенного в медотсек.</text>
+			<text>TEXT_NOT_FOUND</text>
 			<event>
-				<text>Улучшенный медотсек вашего корабля стабилизирует пациента. Через какое-то время он приходит в себя и говорит вам, «Я думал, мне конец... Я уже несколько дней ничего не ел. Вы позволите мне остаться с вами?»</text>
-				<crewMember amount="1" class="human">Чарли</crewMember>
+				<text>TEXT_NOT_FOUND</text>
+				<crewMember amount="1" class="human">TEXT_NOT_FOUND</crewMember>
 			</event>
 		</choice>
 		<choice hidden="true" lvl="2" req="clonebay">
-			<text>(Улучшенный отсек репликации) Быстро зарегистрировать спасенного в базе данных отсека репликации.</text>
+			<text>TEXT_NOT_FOUND</text>
 			<event>
-				<text>Едва вы успеваете добавить физиологические параметры спасенного в базу данных репликатора, как он умирает. Когда его клон покидает капсулу, он трясет головой и говорит: «Почему я жив? Последнее, что я помню - как умер на борту посадочного аппарата. До чего дошла техника!»</text>
-				<crewMember amount="1" class="human">Чарли</crewMember>
+				<text>TEXT_NOT_FOUND</text>
+				<crewMember amount="1" class="human">TEXT_NOT_FOUND</crewMember>
 			</event>
 		</choice>
 	</event>

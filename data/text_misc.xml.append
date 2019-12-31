@@ -201,10 +201,10 @@
 
 <text name="event_ORCHID_SLUG_TAUNT_text">You are surprised to find a Slug ship in a system, mostly populated by Orchids. The Slugs are requesting to communicate using encrypted channel.</text>
 <text name="event_ORCHID_SLUG_TAUNT_c1_choice">Agree to talk with Slugs.</text>
-<text name="event_ORCHID_SLUG_TAUNT_c1_text">"Greetings, two-legged meatsssack. We were looking for sssuch fine ssspecimen for a century. You are truly the ugliessst human in galaxy and deserve to be embalmed and shown in museum. I only wonder what your mom looksss like."</text>
+<text name="event_ORCHID_SLUG_TAUNT_c1_text">"Greetings, two-legged meatsssack. We have been looking for sssuch fine ssspecimen for a century. You are truly the ugliessst human in galaxy and deserve to be embalmed and shown in museum. I only wonder what your mom looksss like."</text>
 <text name="event_ORCHID_SLUG_TAUNT_c1_c1_choice">Attack!</text>
 <text name="event_ORCHID_SLUG_TAUNT_c1_c1_text">You fire at the Slug ship and they immediately respond with evasive maneuvers. The Slug captain sends a distress message to nearby Orchid planet claiming to be attacked by pirates. To your surprise, the Orchids respond with locking Anti-ship battery onto your ship. It was all a part of Slug plan.</text>
-<text name="event_ORCHID_SLUG_TAUNT_c1_c2_choice">Close communication and leave the sector.</text>
+<text name="event_ORCHID_SLUG_TAUNT_c1_c2_choice">Close communication and leave the beacon.</text>
 <text name="event_ORCHID_SLUG_TAUNT_c2_choice">Decline.</text>
 
 <!-- HOSTILE -->

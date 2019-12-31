@@ -6,7 +6,7 @@
 		<setAttributes blue="false" lvl="0" max_group="0" req="orchid"/>
 	</findWithChildLike>
 	<choice blue="false" hidden="true" lvl="1" max_group="0" req="orchid">
-		<text>Send your crew in a shuttle to help put out the fire.</text>
+		<text>TEXT_NOT_FOUND</text>
 		<event load="DISTRESS_STATION_FIRE_CREW_ORCHID"/>
 	</choice>
 </findName>
@@ -14,7 +14,7 @@
 	<text>You send your crew into the station. One of the orchids breaks away from the main group and catches fire. You quickly try to dock and retrieve your crew but not before an unfortunate soul is lost in the inferno. Sending orchids to put out a fire does not seem like a bright idea in hindsight.</text>
 	<removeCrew class="orchid">
 		<clone>true</clone>
-		<text>With a new-found respect for flames, your crewmember's clone stumbles out of the Clone Bay.</text>
+		<text>TEXT_NOT_FOUND</text>
 	</removeCrew>
 	<autoReward level="LOW">scrap_only</autoReward>
 </event>
@@ -28,27 +28,27 @@
 </findName>
 <eventList name="MADMAN_ORCHID">
 	<event>
-		<text>He seems to improve immensely upon getting back to the ship. It might take a while for him to truly be well again, but until then he seems happy to serve as a member of your crew.</text>
-		<crewMember amount="1" class="human">Charlie</crewMember>
+		<text>TEXT_NOT_FOUND</text>
+		<crewMember amount="1" class="human">TEXT_NOT_FOUND</crewMember>
 	</event>
 	<event>
-		<text>It seems he was in worse health than we first thought. He collapses on the trip up to the ship. It doesn't look like he's going to make it...</text>
+		<text>TEXT_NOT_FOUND</text>
 		<choice>
 			<text id="continue"/>
 			<event/>
 		</choice>
 		<choice hidden="true" lvl="2" req="medbay">
-			<text>(Improved Medbay) Quickly bring him to the medbay.</text>
+			<text>TEXT_NOT_FOUND</text>
 			<event>
-				<text>Your improved medbay was able to resuscitate him. After a short time he recovers greatly saying, "I really thought I was a goner... I haven't eaten for days. Would you mind if I stayed on your ship?"</text>
-				<crewMember amount="1" class="human">Charlie</crewMember>
+				<text>TEXT_NOT_FOUND</text>
+				<crewMember amount="1" class="human">TEXT_NOT_FOUND</crewMember>
 			</event>
 		</choice>
 		<choice hidden="true" lvl="2" req="clonebay">
-			<text>(Improved Clonebay) Quickly register him into the clonebay.</text>
+			<text>TEXT_NOT_FOUND</text>
 			<event>
-				<text>Your quick reaction allowed your Clonebay to revive him after he passes. After he steps out of the machine he states, "How am I alive? Wasn't I just dying on some shuttle? Technology sure has changed."</text>
-				<crewMember amount="1" class="human">Charlie</crewMember>
+				<text>TEXT_NOT_FOUND</text>
+				<crewMember amount="1" class="human">TEXT_NOT_FOUND</crewMember>
 			</event>
 		</choice>
 	</event>
@@ -529,7 +529,7 @@
 	<choice hidden="true">
 		<text>Agree to talk with Slugs.</text>
 		<event>
-			<text>"Greetings, two-legged meatsssack. We were looking for sssuch fine ssspecimen for a century. You are truly the ugliessst human in galaxy and deserve to be embalmed and shown in museum. I only wonder what your mom looksss like."</text>
+			<text>"Greetings, two-legged meatsssack. We have been looking for sssuch fine ssspecimen for a century. You are truly the ugliessst human in galaxy and deserve to be embalmed and shown in museum. I only wonder what your mom looksss like."</text>
 			<choice hidden="true">
 				<text>Attack!</text>
 				<event>
@@ -539,7 +539,7 @@
 				</event>
 			</choice>
 			<choice hidden="true">
-				<text>Close communication and leave the sector.</text>
+				<text>Close communication and leave the beacon.</text>
 				<event/>
 			</choice>
 		</event>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FTL>
+<augBlueprint name="ORCHID_RECYCLER">
+	<title>Orchid Recycler</title>
+	<desc>Superior technology allows to save precious missiles and drone parts. Missile based weapons have a 75 percent chance of not using a missile. Non-destroyed drones will be retrieved when jumping, allowing their parts to be reused.</desc>
+	<cost>80</cost>
+	<bp>8</bp>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+</FTL>
