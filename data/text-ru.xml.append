@@ -10,13 +10,13 @@
 <text name="crew_orchid_power_3" language="ru">Тушит пожары в 2 раза медленнее</text>
 
 <text name="aug_ORCHID_RECYCLER_title" language="ru">Орхидский переработчик</text>
-<text name="aug_ORCHID_RECYCLER_desc" language="ru">Ракетное вооружение может с вероятностью 75% не потратить боеголовку при выстреле.</text>
+<text name="aug_ORCHID_RECYCLER_desc" language="ru">Технологии орхидов позводяют сохранять драгоценные боеголовки и детали дронов. Ракетное вооружение может с вероятностью 75% не потратить боеголовку при выстреле. В момент прыжка происходит сбор всех уцелевших дронов, позволяя использовать их детали в дальнейшем.</text>
 
 <text name="ship_PLAYER_SHIP_ORCHID_class" language="ru">Крейсер орхидов</text>
 <text name="ship_PLAYER_SHIP_ORCHID_name" language="ru">«Джуглан»</text>
 <text name="ship_PLAYER_SHIP_ORCHID_desc" language="ru">Орхиды - хрупкие создания, особенно уязвимые к огню, поэтому они вынуждены полагаться на дронов и обман для победы в сражениях.</text>
 <text name="ship_PLAYER_SHIP_ORCHID_AUTUMN_name" language="ru">«Листопад»</text>
-<text name="ship_PLAYER_SHIP_ORCHID_AUTUMN_desc" language="ru">Несмотря на то, что орхиды - не самые лучшие бойцы врукопашную, их способности полезны для абордажных команд.</text>
+<text name="ship_PLAYER_SHIP_ORCHID_AUTUMN_desc" language="ru">Технологии орхидов по переработке использованных деталей позволяют отправлять целые эшелоны дронов для уничтожения вражеских кораблей.</text>
 <text name="ship_PLAYER_SHIP_ORCHID_STRAWBERRY_name" language="ru">«Виктория»</text>
 <text name="ship_PLAYER_SHIP_ORCHID_STRAWBERRY_desc" language="ru">Этот крейсер использует технологии по переработке боеприпасов и мощный зерномет.</text>
 
@@ -34,6 +34,13 @@
 <text name="weapon_KERNEL_CHAIN_short" language="ru">З./раз.</text>
 <text name="weapon_KERNEL_CHAIN_desc" language="ru">Единственное, что может остановить это орудие - недостаток боеприпасов.</text>
 <text name="weapon_KERNEL_CHAIN_tooltip" language="ru">Интервал между выстрелами снижается в ходе стрельбы.</text>
+
+<text name="drone_ORCHID_COMBAT_title" language="ru">Мини-дрон</text>
+<text name="drone_ORCHID_COMBAT_short" language="ru">Мини БД</text>
+<text name="drone_ORCHID_COMBAT_desc" language="ru">Боевой дрон, значительно уменьшенный в размерах для повышения энергоэффективности.</text>
+<text name="drone_ORCHID_COMBAT_BEAM_title" language="ru">Мини-лучевой дрон</text>
+<text name="drone_ORCHID_COMBAT_BEAM_short" language="ru">М. лучевой</text>
+<text name="drone_ORCHID_COMBAT_BEAM_desc" language="ru">Боевой лучевой дрон, значительно уменьшенный в размерах для повышения энергоэффективности.</text>
 
 <text name="ship_ORCHID_BOMBER_1_class" language="ru">Штурмовик орхидов</text>
 <text name="ship_ORCHID_BOMBER_2_class" language="ru">Ударный корабль орхидов</text>

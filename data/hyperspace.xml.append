@@ -25,6 +25,7 @@
 <mod:findLike type="augments">
     <mod-append:aug name="ORCHID_RECYCLER">
 		<function name="EXPLOSIVE_REPLICATOR" value="0.75"/>
+		<function name="DRONE_RECOVERY" value="1"/>
     </mod-append:aug>
 </mod:findLike>
 

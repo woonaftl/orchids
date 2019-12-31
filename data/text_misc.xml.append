@@ -10,13 +10,13 @@
 <text name="crew_orchid_power_3">Put out fires at half speed</text>
 
 <text name="aug_ORCHID_RECYCLER_title">Orchid Recycler</text>
-<text name="aug_ORCHID_RECYCLER_desc">Missile based weapons have a 75 percent chance of not using a missile.</text>
+<text name="aug_ORCHID_RECYCLER_desc">Superior technology allows to save precious missiles and drone parts. Missile based weapons have a 75 percent chance of not using a missile. Non-destroyed drones will be retrieved when jumping, allowing their parts to be reused.</text>
 
 <text name="ship_PLAYER_SHIP_ORCHID_class">Orchid Cruiser</text>
 <text name="ship_PLAYER_SHIP_ORCHID_name">Juglan</text>
 <text name="ship_PLAYER_SHIP_ORCHID_desc">Orchids are frail and vulnerable, especially to fires, so they have to rely on drones and manipulation to win battles.</text>
 <text name="ship_PLAYER_SHIP_ORCHID_AUTUMN_name">Autumn</text>
-<text name="ship_PLAYER_SHIP_ORCHID_AUTUMN_desc">Even though they are not the fiercest or most resilient, Orchid abilities make them a welcome addition to boarding teams.</text>
+<text name="ship_PLAYER_SHIP_ORCHID_AUTUMN_desc">Orchid recycling technology allows to deploy giant swarms of combat drones to destroy enemy ships.</text>
 <text name="ship_PLAYER_SHIP_ORCHID_STRAWBERRY_name">The Last Straw</text> <!-- AgentTheKat -->
 <text name="ship_PLAYER_SHIP_ORCHID_STRAWBERRY_desc">This ship relies on recycling technology to destroy enemies with a kernel launcher.</text>
 
@@ -34,6 +34,13 @@
 <text name="weapon_KERNEL_CHAIN_short">Chain K.</text>
 <text name="weapon_KERNEL_CHAIN_desc">The only thing that can stop this weapon is lack of ammunition.</text>
 <text name="weapon_KERNEL_CHAIN_tooltip">Cooldown drops the more it fires.</text>
+
+<text name="drone_ORCHID_COMBAT_title">Mini-Combat Drone</text>
+<text name="drone_ORCHID_COMBAT_short">Mini-Combat</text>
+<text name="drone_ORCHID_COMBAT_desc">Combat drone, reduced in size to improve power effeciency.</text>
+<text name="drone_ORCHID_COMBAT_BEAM_title">Mini-Beam Drone</text>
+<text name="drone_ORCHID_COMBAT_BEAM_short">Mini-Beam</text>
+<text name="drone_ORCHID_COMBAT_BEAM_desc">Anti-ship beam drone, reduced in size to improve power effeciency.</text>
 
 <text name="ship_ORCHID_BOMBER_1_class">Orchid Bomber</text>
 <text name="ship_ORCHID_BOMBER_2_class">Orchid Assault</text>

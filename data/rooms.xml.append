@@ -11,7 +11,7 @@
 </roomLayout>
 
 <roomLayout name="shields_orchid_2">
-	<computerGlow x="36" y="53" dir="DOWN"/>
+	<computerGlow x="35" y="18" dir="DOWN"/>
 </roomLayout>
 
 </FTL>
