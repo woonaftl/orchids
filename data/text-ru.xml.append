@@ -2,6 +2,8 @@
 
 <FTL>
 
+<text name="augment_no_effect" language="ru">Следующие модули не работают пока установлен этот модуль:</text>
+
 <text name="crew_orchid_title" language="ru">Орхид</text>
 <text name="crew_orchid_short" language="ru">Орхид</text>
 <text name="crew_orchid_desc" language="ru">Эти растительные формы жизни имеют мало общего с земными, но насыщают воздух кислородом столь же хорошо.</text>
