@@ -37,10 +37,10 @@
 
 <text name="drone_ORCHID_COMBAT_title">Mini-Combat Drone</text>
 <text name="drone_ORCHID_COMBAT_short">Mini-Combat</text>
-<text name="drone_ORCHID_COMBAT_desc">Combat drone, reduced in size to improve power effeciency.</text>
+<text name="drone_ORCHID_COMBAT_desc">Combat drone, designed to sacrifice size and speed to improve power effeciency.</text>
 <text name="drone_ORCHID_COMBAT_BEAM_title">Mini-Beam Drone</text>
 <text name="drone_ORCHID_COMBAT_BEAM_short">Mini-Beam</text>
-<text name="drone_ORCHID_COMBAT_BEAM_desc">Anti-ship beam drone, reduced in size to improve power effeciency.</text>
+<text name="drone_ORCHID_COMBAT_BEAM_desc">Anti-ship beam drone, designed to sacrifice size and speed to improve power effeciency.</text>
 
 <text name="ship_ORCHID_BOMBER_1_class">Orchid Bomber</text>
 <text name="ship_ORCHID_BOMBER_2_class">Orchid Assault</text>

@@ -39,10 +39,10 @@
 
 <text name="drone_ORCHID_COMBAT_title" language="ru">Мини-дрон</text>
 <text name="drone_ORCHID_COMBAT_short" language="ru">Мини БД</text>
-<text name="drone_ORCHID_COMBAT_desc" language="ru">Боевой дрон, значительно уменьшенный в размерах для повышения энергоэффективности.</text>
+<text name="drone_ORCHID_COMBAT_desc" language="ru">Боевой дрон, пожертвовавший скоростью для повышения энергоэффективности.</text>
 <text name="drone_ORCHID_COMBAT_BEAM_title" language="ru">Мини-лучевой дрон</text>
 <text name="drone_ORCHID_COMBAT_BEAM_short" language="ru">М. лучевой</text>
-<text name="drone_ORCHID_COMBAT_BEAM_desc" language="ru">Боевой лучевой дрон, значительно уменьшенный в размерах для повышения энергоэффективности.</text>
+<text name="drone_ORCHID_COMBAT_BEAM_desc" language="ru">Боевой лучевой дрон, пожертвовавший скоростью для повышения энергоэффективности.</text>
 
 <text name="ship_ORCHID_BOMBER_1_class" language="ru">Штурмовик орхидов</text>
 <text name="ship_ORCHID_BOMBER_2_class" language="ru">Ударный корабль орхидов</text>
