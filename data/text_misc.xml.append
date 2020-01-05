@@ -90,7 +90,7 @@
 <text name="text_STORE_ORCHID_3">A lone trading Orchid vessel awaits you at the beacon. Its crew sends you a simple message: "Military goods available for sale."</text>
 <text name="text_STORE_ORCHID_4">You stumble upon an Orchid trading station dealing with common goods made from organic materials originating from Orchid home planet. Learning that you represent Federation, Orchids agree to sell some military goods as well.</text>
 
-<text name="text_NOTHING_ORCHID_1">Orchid space is famous for being calm and peaceful. This beacon examplifies that.</text>
+<text name="text_NOTHING_ORCHID_1">Orchid space is famous for being calm and peaceful. This beacon exemplifies that.</text>
 <text name="text_NOTHING_ORCHID_2">This beacon serves as a connection. You notice how it is located very far from local star. Probably as a means of protection against solar flares.</text>
 <text name="text_NOTHING_ORCHID_3">You arrive at a beacon located near a planet in process of terraforming to support plant life. There are no ships around. You prepare to jump away.</text>
 <text name="text_NOTHING_ORCHID_4">This beacon is devoid of any activity at the moment. The star is too dim, providing insufficient energy for light dependent flora.</text>
@@ -132,7 +132,7 @@
 
 <text name="event_ORCHID_DISTRESS_COLONY_FIRE_text">A distress signal is coming from the surface of a planet near the beacon. The wildfire is spreading towards a small Orchid colony which lacks the resources to put fires out, or evacuate in time.</text>
 <text name="event_ORCHID_DISTRESS_COLONY_FIRE_c1_choice">Help to evacuate as many civilians as you can.</text>
-<text name="event_ORCHID_DISTRESS_COLONY_FIRE_c1_text">The ecosystem on the Orchid planet is so vulnerable to fire that even your whole crew wasn't enough to save the Orchid colony in time. You succeeded in helping more resilient individuals but most of Orchid seeds and babies were lost to fire.</text>
+<text name="event_ORCHID_DISTRESS_COLONY_FIRE_c1_text">The ecosystem on the Orchid planet is so vulnerable to fire that even your whole crew wasn't enough to save the Orchid colony in time. You succeeded in helping the more resilient individuals but most of the Orchid seeds and saplings were lost to the fire.</text>
 <text name="event_ORCHID_DISTRESS_COLONY_FIRE_c2_choice">This incident is no concern to us.</text>
 <text name="event_ORCHID_DISTRESS_COLONY_FIRE_c3_choice">(Fire Suppression) Use the augmentation to save the colony.</text>
 <text name="event_ORCHID_DISTRESS_COLONY_FIRE_c3_text">The Fire Suppression system is deployed in the colony and helps tremendously holding wildfires in key points back while all living Orchids evacuate. One of the Orchids is so impressed by your performance that they ask to join your crew.</text>
@@ -201,7 +201,7 @@
 
 <text name="event_ORCHID_SLUG_TAUNT_text">You are surprised to find a Slug ship in a system, mostly populated by Orchids. The Slugs are requesting to communicate using encrypted channel.</text>
 <text name="event_ORCHID_SLUG_TAUNT_c1_choice">Agree to talk with Slugs.</text>
-<text name="event_ORCHID_SLUG_TAUNT_c1_text">"Greetings, two-legged meatsssack. We have been looking for sssuch fine ssspecimen for a century. You are truly the ugliessst human in galaxy and deserve to be embalmed and shown in museum. I only wonder what your mom looksss like."</text>
+<text name="event_ORCHID_SLUG_TAUNT_c1_text">"Greetings, two-legged meatsssack. We have been looking for sssuch a fine ssspecimen for a century. You are truly the ugliessst human in the galaxy and deserve to be embalmed and shown in a museum. I only wonder what your mom looksss like."</text>
 <text name="event_ORCHID_SLUG_TAUNT_c1_c1_choice">Attack!</text>
 <text name="event_ORCHID_SLUG_TAUNT_c1_c1_text">You fire at the Slug ship and they immediately respond with evasive maneuvers. The Slug captain sends a distress message to nearby Orchid planet claiming to be attacked by pirates. To your surprise, the Orchids respond with locking Anti-ship battery onto your ship. It was all a part of Slug plan.</text>
 <text name="event_ORCHID_SLUG_TAUNT_c1_c2_choice">Close communication and leave the beacon.</text>

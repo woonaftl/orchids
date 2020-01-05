@@ -340,7 +340,7 @@
 	<tip>tip_combat</tip>
 	<title>Mini-Combat Drone</title>
 	<short>Mini-Combat</short>
-	<desc>Combat drone, reduced in size to improve power effeciency.</desc>
+	<desc>Combat drone, designed to sacrifice size and speed to improve power effeciency.</desc>
 	<power>1</power>
 	<cooldown>1000</cooldown>
 	<!-- Doesn't affect combat drone -->
@@ -358,7 +358,7 @@
 	<tip>tip_combat</tip>
 	<title>Mini-Beam Drone</title>
 	<short>Mini-Beam</short>
-	<desc>Anti-ship beam drone, reduced in size to improve power effeciency.</desc>
+	<desc>Anti-ship beam drone, designed to sacrifice size and speed to improve power effeciency.</desc>
 	<power>1</power>
 	<cooldown>1000</cooldown>
 	<!-- Doesn't affect combat drone -->

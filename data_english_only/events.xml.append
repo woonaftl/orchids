@@ -160,7 +160,7 @@
 	<text load="NOTHING_ORCHID"/>
 </event>
 <textList name="NOTHING_ORCHID">
-	<text>Orchid space is famous for being calm and peaceful. This beacon examplifies that.</text>
+	<text>Orchid space is famous for being calm and peaceful. This beacon exemplifies that.</text>
 	<text back="BG_DARK" planet="NONE">This beacon serves as a connection. You notice how it is located very far from local star. Probably as a means of protection against solar flares.</text>
 	<text planet="PLANET_UNPOPULATED">You arrive at a beacon located near a planet in process of terraforming to support plant life. There are no ships around. You prepare to jump away.</text>
 	<text back="BG_DARK" planet="NONE">This beacon is devoid of any activity at the moment. The star is too dim, providing insufficient energy for light dependent flora.</text>
@@ -259,7 +259,7 @@
 	<choice hidden="true">
 		<text>Help to evacuate as many civilians as you can.</text>
 		<event>
-			<text>The ecosystem on the Orchid planet is so vulnerable to fire that even your whole crew wasn't enough to save the Orchid colony in time. You succeeded in helping more resilient individuals but most of Orchid seeds and babies were lost to fire.</text>
+			<text>The ecosystem on the Orchid planet is so vulnerable to fire that even your whole crew wasn't enough to save the Orchid colony in time. You succeeded in helping the more resilient individuals but most of the Orchid seeds and saplings were lost to the fire.</text>
 		</event>
 	</choice>
 	<choice hidden="true">
@@ -529,7 +529,7 @@
 	<choice hidden="true">
 		<text>Agree to talk with Slugs.</text>
 		<event>
-			<text>"Greetings, two-legged meatsssack. We have been looking for sssuch fine ssspecimen for a century. You are truly the ugliessst human in galaxy and deserve to be embalmed and shown in museum. I only wonder what your mom looksss like."</text>
+			<text>"Greetings, two-legged meatsssack. We have been looking for sssuch a fine ssspecimen for a century. You are truly the ugliessst human in the galaxy and deserve to be embalmed and shown in a museum. I only wonder what your mom looksss like."</text>
 			<choice hidden="true">
 				<text>Attack!</text>
 				<event>
